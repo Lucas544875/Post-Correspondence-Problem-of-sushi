@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Problem, Screen } from '../types';
 import { renderGameString } from '../utils/gameUtils';
+import { removePairs, isCleared } from '../utils/pairLogic';
 
 interface GameBoardProps {
   problem: Problem;
@@ -10,10 +11,13 @@ interface GameBoardProps {
 
 export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   const [selectedTiles, setSelectedTiles] = useState<number[]>([]);
-  const [topBelt, setTopBelt] = useState('');
-  const [bottomBelt, setBottomBelt] = useState('');
+  const [topBelt, setTopBelt] = useState(problem.initialState.topBelt);
+  const [bottomBelt, setBottomBelt] = useState(problem.initialState.bottomBelt);
+  const [isShipping, setIsShipping] = useState(false);
 
   const handleTileClick = (tileIndex: number) => {
+    if (isShipping) return; // 出荷中は操作を無効化
+
     const newSelected = [...selectedTiles, tileIndex];
     const newTop = topBelt + problem.tiles[tileIndex].top;
     const newBottom = bottomBelt + problem.tiles[tileIndex].bottom;
@@ -21,19 +25,50 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setSelectedTiles(newSelected);
     setTopBelt(newTop);
     setBottomBelt(newBottom);
-
-    if (newTop === newBottom && newTop.length > 0) {
-      setTimeout(() => {
-        onClear();
-        onNavigate('clear');
-      }, 500);
-    }
   };
+
+  // ペア消去とクリア判定のuseEffect
+  useEffect(() => {
+    if (topBelt.length > 0 && bottomBelt.length > 0) {
+      const result = removePairs(topBelt, bottomBelt);
+      
+      if (result.hasRemovals) {
+        // 出荷アニメーション開始
+        setIsShipping(true);
+        
+        setTimeout(() => {
+          setTopBelt(result.newTopBelt);
+          setBottomBelt(result.newBottomBelt);
+          setIsShipping(false);
+          
+          // 再帰的にペアチェック（連続ペア消去のため）
+          // 次のフレームで再度useEffectが発火する
+          
+        }, 800); // アニメーション時間
+      } else {
+        // ペアがない場合、クリア判定
+        if (isCleared(topBelt, bottomBelt)) {
+          setTimeout(() => {
+            onClear();
+            onNavigate('clear');
+          }, 500);
+        }
+      }
+    } else {
+      // どちらかが空の場合もクリア判定
+      if (isCleared(topBelt, bottomBelt)) {
+        setTimeout(() => {
+          onClear();
+          onNavigate('clear');
+        }, 500);
+      }
+    }
+  }, [topBelt, bottomBelt, onClear, onNavigate]);
 
   const handleClearAll = () => {
     setSelectedTiles([]);
-    setTopBelt('');
-    setBottomBelt('');
+    setTopBelt(problem.initialState.topBelt);
+    setBottomBelt(problem.initialState.bottomBelt);
   };
 
   const handleImpossible = () => {
@@ -59,7 +94,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             onClick={handleClearAll}
             className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
           >
-            すべて消去
+            リセット
           </button>
         </div>
 
@@ -72,7 +107,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
               <div className="conveyor-track bg-gray-800 p-4">
                 <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
                   <div className="conveyor-content flex items-center">
-                    {topBelt ? renderGameString(topBelt) : <span className="text-gray-400">（空のベルト）</span>}
+                    {topBelt ? renderGameString(topBelt, isShipping) : <span className="text-gray-400">（空のレーン）</span>}
                   </div>
                 </div>
               </div>
@@ -86,25 +121,25 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
               <div className="conveyor-track bg-gray-800 p-4">
                 <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
                   <div className="conveyor-content flex items-center">
-                    {bottomBelt ? renderGameString(bottomBelt) : <span className="text-gray-400">（空のベルト）</span>}
+                    {bottomBelt ? renderGameString(bottomBelt, isShipping) : <span className="text-gray-400">（空のレーン）</span>}
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* 合流チェック表示 */}
-          {topBelt && bottomBelt && (
-            <div className="text-center p-4 bg-blue-100 rounded-lg">
-              <div className="text-lg font-bold mb-2">
-                {topBelt === bottomBelt ? '✅ ベルトが合流しました！' : '❌ まだ合流していません'}
-              </div>
-              <div className="text-sm text-gray-600 flex justify-center space-x-4">
-                <div>上: {topBelt}</div>
-                <div>下: {bottomBelt}</div>
-              </div>
+          {/* レーン状況表示 */}
+          <div className="text-center p-4 bg-blue-100 rounded-lg">
+            <div className="text-lg font-bold mb-2">
+              {isShipping ? '🚚 商品を出荷中...' : 
+               topBelt.length === 0 && bottomBelt.length === 0 ? '✅ 全レーンが空になりました！' : 
+               '🎯 刺身とタンポポをペアにして出荷しよう'}
             </div>
-          )}
+            <div className="text-sm text-gray-600 flex justify-center space-x-4">
+              <div>上レーン: {topBelt.length === 0 ? '空' : `${topBelt.length}個`}</div>
+              <div>下レーン: {bottomBelt.length === 0 ? '空' : `${bottomBelt.length}個`}</div>
+            </div>
+          </div>
         </div>
 
         {/* タイルボタン */}

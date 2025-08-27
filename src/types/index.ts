@@ -1,6 +1,10 @@
 export interface Problem {
   id: string;
   tiles: Tile[];
+  initialState: {
+    topBelt: string;
+    bottomBelt: string;
+  };
   solution?: number[];
   solvable: boolean;
   difficulty: 'np-hard' | 'undecidable';
