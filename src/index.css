@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ベルトコンベアアニメーション */
+.conveyor-belt {
+  position: relative;
+  background: linear-gradient(90deg, 
+    #4a5568 0%, 
+    #2d3748 25%, 
+    #4a5568 50%, 
+    #2d3748 75%, 
+    #4a5568 100%);
+  background-size: 40px 100%;
+  animation: conveyor-move 2s linear infinite;
+}
+
+@keyframes conveyor-move {
+  0% { background-position: 0px 0; }
+  100% { background-position: 40px 0; }
+}
+
+.conveyor-track {
+  position: relative;
+  background: repeating-linear-gradient(
+    90deg,
+    #1a202c,
+    #1a202c 5px,
+    #2d3748 5px,
+    #2d3748 10px
+  );
+}
+
+.conveyor-content {
+  animation: conveyor-slide 3s ease-in-out;
+}
+
+@keyframes conveyor-slide {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* タイルクリック時のエフェクト */
+.tile-button {
+  transition: all 0.3s ease;
+}
+
+.tile-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.tile-button:active {
+  transform: scale(0.95);
+}
+
+/* 新しいアイテム追加時のアニメーション */
+.belt-item-enter {
+  animation: belt-item-slide 0.5s ease-out;
+}
+
+@keyframes belt-item-slide {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
