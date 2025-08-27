@@ -1,8 +1,8 @@
 import type { Problem } from '../types';
 
-// 絵文字の代わりに安全な文字を使用
-const SASHIMI = '🍣';  // 刺身
-const DANDELION = '🌼'; // タンポポ
+// 画像識別用の文字を使用
+const SASHIMI = 'S';    // 刺身を表す文字
+const DANDELION = 'T';  // タンポポ（Tampopo）を表す文字
 
 export const sampleProblems: Problem[] = [
   {

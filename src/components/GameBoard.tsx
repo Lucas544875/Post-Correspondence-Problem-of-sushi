@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Problem, Screen } from '../types';
-import { splitEmoji, getEmojiLength } from '../utils/emoji';
+import { renderGameString } from '../utils/gameUtils';
 
 interface GameBoardProps {
   problem: Problem;
@@ -22,7 +22,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setTopBelt(newTop);
     setBottomBelt(newBottom);
 
-    if (newTop === newBottom && getEmojiLength(newTop) > 0) {
+    if (newTop === newBottom && newTop.length > 0) {
       setTimeout(() => {
         onClear();
         onNavigate('clear');
@@ -71,12 +71,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
               <div className="conveyor-track bg-gray-800 p-4">
                 <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
-                  <div className="conveyor-content font-emoji">
-                    {topBelt ? splitEmoji(topBelt).map((char, i) => (
-                      <span key={i} className="inline-block mx-1 text-2xl" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>
-                        {char}
-                      </span>
-                    )) : <span className="text-gray-400">（空のベルト）</span>}
+                  <div className="conveyor-content flex items-center">
+                    {topBelt ? renderGameString(topBelt) : <span className="text-gray-400">（空のベルト）</span>}
                   </div>
                 </div>
               </div>
@@ -89,12 +85,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
               <div className="conveyor-track bg-gray-800 p-4">
                 <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
-                  <div className="conveyor-content font-emoji">
-                    {bottomBelt ? splitEmoji(bottomBelt).map((char, i) => (
-                      <span key={i} className="inline-block mx-1 text-2xl" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>
-                        {char}
-                      </span>
-                    )) : <span className="text-gray-400">（空のベルト）</span>}
+                  <div className="conveyor-content flex items-center">
+                    {bottomBelt ? renderGameString(bottomBelt) : <span className="text-gray-400">（空のベルト）</span>}
                   </div>
                 </div>
               </div>
@@ -126,11 +118,11 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
                 className="tile-button bg-white hover:bg-gray-50 border-4 border-orange-300 hover:border-orange-500 rounded-lg p-4"
               >
                 <div className="text-center">
-                  <div className="text-lg font-bold text-yellow-600 mb-2">
-                    上: {tile.top}
+                  <div className="text-lg font-bold text-yellow-600 mb-2 flex items-center justify-center">
+                    上: <div className="ml-2 flex">{renderGameString(tile.top)}</div>
                   </div>
-                  <div className="text-lg font-bold text-red-600">
-                    下: {tile.bottom}
+                  <div className="text-lg font-bold text-red-600 flex items-center justify-center">
+                    下: <div className="ml-2 flex">{renderGameString(tile.bottom)}</div>
                   </div>
                 </div>
               </button>
