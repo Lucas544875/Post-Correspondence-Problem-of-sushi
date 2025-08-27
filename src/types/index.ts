@@ -8,8 +8,8 @@ export interface Problem {
 
 export interface Tile {
   id: string;
-  top: string;    // 上のベルト（1）
-  bottom: string; // 下のベルト（0）
+  top: string;    // 上のベルト（🌼 = 1）
+  bottom: string; // 下のベルト（🍣 = 0）
 }
 
 export interface GameState {

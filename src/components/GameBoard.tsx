@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Problem, Screen } from '../types';
+import { splitEmoji, getEmojiLength } from '../utils/emoji';
 
 interface GameBoardProps {
   problem: Problem;
@@ -21,7 +22,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setTopBelt(newTop);
     setBottomBelt(newBottom);
 
-    if (newTop === newBottom && newTop.length > 0) {
+    if (newTop === newBottom && getEmojiLength(newTop) > 0) {
       setTimeout(() => {
         onClear();
         onNavigate('clear');
@@ -64,38 +65,36 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
 
         {/* ベルトコンベア表示エリア */}
         <div className="mb-8 space-y-6">
-          {/* 上のベルト - 刺身パック */}
+          {/* 上のベルト */}
           <div className="relative">
-            <div className="text-lg font-bold mb-2 text-red-600">🍣 刺身パックベルト (1)</div>
+            <div className="text-lg font-bold mb-2 text-yellow-600">上のベルト</div>
             <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
               <div className="conveyor-track bg-gray-800 p-4">
-                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl font-mono">
-                  <div className="conveyor-content">
-                    {topBelt.split('').map((char, i) => (
-                      <span key={i} className="inline-block mx-1 text-red-600">
-                        {char === '1' ? '🍣' : char}
+                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
+                  <div className="conveyor-content font-emoji">
+                    {topBelt ? splitEmoji(topBelt).map((char, i) => (
+                      <span key={i} className="inline-block mx-1 text-2xl" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>
+                        {char}
                       </span>
-                    ))}
-                    {!topBelt && <span className="text-gray-400">（空のベルト）</span>}
+                    )) : <span className="text-gray-400">（空のベルト）</span>}
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* 下のベルト - タンポポ */}
+          {/* 下のベルト */}
           <div className="relative">
-            <div className="text-lg font-bold mb-2 text-yellow-600">🌼 タンポポベルト (0)</div>
+            <div className="text-lg font-bold mb-2 text-red-600">下のベルト</div>
             <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
               <div className="conveyor-track bg-gray-800 p-4">
-                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl font-mono">
-                  <div className="conveyor-content">
-                    {bottomBelt.split('').map((char, i) => (
-                      <span key={i} className="inline-block mx-1 text-yellow-600">
-                        {char === '0' ? '🌼' : char}
+                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
+                  <div className="conveyor-content font-emoji">
+                    {bottomBelt ? splitEmoji(bottomBelt).map((char, i) => (
+                      <span key={i} className="inline-block mx-1 text-2xl" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>
+                        {char}
                       </span>
-                    ))}
-                    {!bottomBelt && <span className="text-gray-400">（空のベルト）</span>}
+                    )) : <span className="text-gray-400">（空のベルト）</span>}
                   </div>
                 </div>
               </div>
@@ -108,8 +107,9 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
               <div className="text-lg font-bold mb-2">
                 {topBelt === bottomBelt ? '✅ ベルトが合流しました！' : '❌ まだ合流していません'}
               </div>
-              <div className="text-sm text-gray-600">
-                刺身パック: {topBelt} | タンポポ: {bottomBelt}
+              <div className="text-sm text-gray-600 flex justify-center space-x-4">
+                <div>上: {topBelt}</div>
+                <div>下: {bottomBelt}</div>
               </div>
             </div>
           )}
@@ -126,11 +126,11 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
                 className="tile-button bg-white hover:bg-gray-50 border-4 border-orange-300 hover:border-orange-500 rounded-lg p-4"
               >
                 <div className="text-center">
-                  <div className="text-lg font-bold text-red-600 mb-2">
-                    🍣 {tile.top}
+                  <div className="text-lg font-bold text-yellow-600 mb-2">
+                    上: {tile.top}
                   </div>
-                  <div className="text-lg font-bold text-yellow-600">
-                    🌼 {tile.bottom}
+                  <div className="text-lg font-bold text-red-600">
+                    下: {tile.bottom}
                   </div>
                 </div>
               </button>

@@ -6,6 +6,11 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+/* 絵文字フォントの明示的な指定 */
+.font-emoji {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', sans-serif;
+}
+
 /* ベルトコンベアアニメーション */
 .conveyor-belt {
   position: relative;

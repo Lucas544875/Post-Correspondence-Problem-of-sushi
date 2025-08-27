@@ -1,5 +1,9 @@
 import type { Problem } from '../types';
 
+// 絵文字の代わりに安全な文字を使用
+const SASHIMI = '🍣';  // 刺身
+const DANDELION = '🌼'; // タンポポ
+
 export const sampleProblems: Problem[] = [
   {
     id: '1',
@@ -7,8 +11,8 @@ export const sampleProblems: Problem[] = [
     solvable: true,
     solution: [0, 1, 0],
     tiles: [
-      { id: 'tile-1', top: '1', bottom: '10' },
-      { id: 'tile-2', top: '0', bottom: '1' },
+      { id: 'tile-1', top: DANDELION, bottom: DANDELION + SASHIMI },
+      { id: 'tile-2', top: SASHIMI, bottom: "" },
     ]
   },
   {
@@ -17,9 +21,9 @@ export const sampleProblems: Problem[] = [
     solvable: true,
     solution: [1, 0, 1, 0],
     tiles: [
-      { id: 'tile-1', top: '10', bottom: '101' },
-      { id: 'tile-2', top: '0', bottom: '1' },
-      { id: 'tile-3', top: '1', bottom: '0' },
+      { id: 'tile-1', top: DANDELION + SASHIMI, bottom: DANDELION + SASHIMI + DANDELION },
+      { id: 'tile-2', top: SASHIMI, bottom: DANDELION },
+      { id: 'tile-3', top: DANDELION, bottom: SASHIMI },
     ]
   },
   {
@@ -27,8 +31,8 @@ export const sampleProblems: Problem[] = [
     difficulty: 'undecidable',
     solvable: false,
     tiles: [
-      { id: 'tile-1', top: '1', bottom: '10' },
-      { id: 'tile-2', top: '10', bottom: '1' },
+      { id: 'tile-1', top: DANDELION, bottom: DANDELION + SASHIMI },
+      { id: 'tile-2', top: DANDELION + SASHIMI, bottom: DANDELION },
     ]
   },
 ];
