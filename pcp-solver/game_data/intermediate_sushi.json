@@ -1,0 +1,237 @@
+{
+  "name": "intermediate_sushi",
+  "difficulty": "medium",
+  "theme": "sushi",
+  "total_problems": 8,
+  "solvable_problems": 5,
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "aa",
+          "aaa"
+        ],
+        [
+          "bb",
+          "bb"
+        ],
+        [
+          "aaa",
+          "aa"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "search_time": 0.003001689910888672,
+      "solution_length": 20,
+      "difficulty_score": 6,
+      "solution_string": {
+        "top": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bottom": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "01",
+          "010"
+        ],
+        [
+          "10",
+          "101"
+        ],
+        [
+          "010",
+          "10"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "01010",
+        "bottom": "01010",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "01",
+          "010"
+        ],
+        [
+          "10",
+          "101"
+        ],
+        [
+          "010",
+          "10"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "01010",
+        "bottom": "01010",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "ab",
+          "aba"
+        ],
+        [
+          "baa",
+          "aa"
+        ],
+        [
+          "aba",
+          "bab"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "search_time": 0.0,
+      "solution_length": 3,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "abababaa",
+        "bottom": "abababaa",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "01",
+          "010"
+        ],
+        [
+          "10",
+          "101"
+        ],
+        [
+          "010",
+          "10"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "01010",
+        "bottom": "01010",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abc",
+          "cab"
+        ],
+        [
+          "bca",
+          "abc"
+        ],
+        [
+          "cab",
+          "bca"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    },
+    {
+      "dominoes": [
+        [
+          "abc",
+          "cab"
+        ],
+        [
+          "bca",
+          "abc"
+        ],
+        [
+          "cab",
+          "bca"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    },
+    {
+      "dominoes": [
+        [
+          "abc",
+          "cab"
+        ],
+        [
+          "bca",
+          "abc"
+        ],
+        [
+          "cab",
+          "bca"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    }
+  ],
+  "created_at": "2025-08-29 01:13:20"
+}

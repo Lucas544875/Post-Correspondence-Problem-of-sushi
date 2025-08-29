@@ -1,0 +1,254 @@
+{
+  "name": "intermediate_alphabet",
+  "difficulty": "medium",
+  "theme": "alphabet",
+  "total_problems": 8,
+  "solvable_problems": 7,
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "12",
+          "121"
+        ],
+        [
+          "21",
+          "212"
+        ],
+        [
+          "121",
+          "21"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "12121",
+        "bottom": "12121",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abc",
+          "cab"
+        ],
+        [
+          "bca",
+          "abc"
+        ],
+        [
+          "cab",
+          "bca"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    },
+    {
+      "dominoes": [
+        [
+          "ab",
+          "aba"
+        ],
+        [
+          "baa",
+          "aa"
+        ],
+        [
+          "aba",
+          "bab"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "search_time": 0.0,
+      "solution_length": 3,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "abababaa",
+        "bottom": "abababaa",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "12",
+          "121"
+        ],
+        [
+          "21",
+          "212"
+        ],
+        [
+          "121",
+          "21"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "12121",
+        "bottom": "12121",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "xy",
+          "xyx"
+        ],
+        [
+          "yx",
+          "yxy"
+        ],
+        [
+          "xyx",
+          "yx"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "xyxyx",
+        "bottom": "xyxyx",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "ab",
+          "aba"
+        ],
+        [
+          "baa",
+          "aa"
+        ],
+        [
+          "aba",
+          "bab"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "search_time": 0.0,
+      "solution_length": 3,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "abababaa",
+        "bottom": "abababaa",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "aa",
+          "aaa"
+        ],
+        [
+          "bb",
+          "bb"
+        ],
+        [
+          "aaa",
+          "aa"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "search_time": 0.0025115013122558594,
+      "solution_length": 20,
+      "difficulty_score": 6,
+      "solution_string": {
+        "top": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bottom": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "12",
+          "121"
+        ],
+        [
+          "21",
+          "212"
+        ],
+        [
+          "121",
+          "21"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "12121",
+        "bottom": "12121",
+        "match": true
+      }
+    }
+  ],
+  "created_at": "2025-08-29 01:13:20"
+}

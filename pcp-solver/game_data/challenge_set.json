@@ -1,0 +1,485 @@
+{
+  "name": "challenge_set",
+  "difficulty": "hard",
+  "theme": "sushi",
+  "total_problems": 15,
+  "solvable_problems": 12,
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "abcd",
+          "abc"
+        ],
+        [
+          "cd",
+          "d"
+        ],
+        [
+          "d",
+          "dd"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "abcdd",
+        "bottom": "abcdd",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abcd",
+          "abc"
+        ],
+        [
+          "cd",
+          "d"
+        ],
+        [
+          "d",
+          "dd"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "abcdd",
+        "bottom": "abcdd",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abcd",
+          "abc"
+        ],
+        [
+          "cd",
+          "d"
+        ],
+        [
+          "d",
+          "dd"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "abcdd",
+        "bottom": "abcdd",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "xyz",
+          "xy"
+        ],
+        [
+          "zx",
+          "x"
+        ],
+        [
+          "xzz",
+          "zy"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    },
+    {
+      "dominoes": [
+        [
+          "pqr",
+          "pq"
+        ],
+        [
+          "qr",
+          "q"
+        ],
+        [
+          "r",
+          "rr"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "pqrr",
+        "bottom": "pqrr",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "x",
+          "xxx"
+        ],
+        [
+          "xx",
+          "x"
+        ],
+        [
+          "xxx",
+          "xxxx"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 4.032599210739136,
+      "solution_length": 18,
+      "difficulty_score": 8,
+      "solution_string": {
+        "top": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "bottom": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "pqr",
+          "pq"
+        ],
+        [
+          "qr",
+          "q"
+        ],
+        [
+          "r",
+          "rr"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "pqrr",
+        "bottom": "pqrr",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abc",
+          "ab"
+        ],
+        [
+          "ca",
+          "a"
+        ],
+        [
+          "acc",
+          "ba"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    },
+    {
+      "dominoes": [
+        [
+          "x",
+          "xxx"
+        ],
+        [
+          "xx",
+          "x"
+        ],
+        [
+          "xxx",
+          "xxxx"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 4.0339391231536865,
+      "solution_length": 18,
+      "difficulty_score": 8,
+      "solution_string": {
+        "top": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "bottom": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "pqr",
+          "pq"
+        ],
+        [
+          "qr",
+          "q"
+        ],
+        [
+          "r",
+          "rr"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "pqrr",
+        "bottom": "pqrr",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abcd",
+          "abc"
+        ],
+        [
+          "cd",
+          "d"
+        ],
+        [
+          "d",
+          "dd"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "abcdd",
+        "bottom": "abcdd",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "x",
+          "xxx"
+        ],
+        [
+          "xx",
+          "x"
+        ],
+        [
+          "xxx",
+          "xxxx"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 3.9722249507904053,
+      "solution_length": 18,
+      "difficulty_score": 8,
+      "solution_string": {
+        "top": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "bottom": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "x",
+          "xxx"
+        ],
+        [
+          "xx",
+          "x"
+        ],
+        [
+          "xxx",
+          "xxxx"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 3.968710422515869,
+      "solution_length": 18,
+      "difficulty_score": 8,
+      "solution_string": {
+        "top": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "bottom": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "abcd",
+          "abc"
+        ],
+        [
+          "cd",
+          "d"
+        ],
+        [
+          "d",
+          "dd"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "abcdd",
+        "bottom": "abcdd",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "xyz",
+          "xy"
+        ],
+        [
+          "zx",
+          "x"
+        ],
+        [
+          "xzz",
+          "zy"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 8
+    }
+  ],
+  "created_at": "2025-08-29 01:14:11"
+}

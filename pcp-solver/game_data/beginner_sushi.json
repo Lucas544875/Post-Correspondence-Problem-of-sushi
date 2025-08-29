@@ -1,0 +1,177 @@
+{
+  "name": "beginner_sushi",
+  "difficulty": "easy",
+  "theme": "sushi",
+  "total_problems": 5,
+  "solvable_problems": 5,
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "shi",
+          "shis"
+        ],
+        [
+          "his",
+          "hish"
+        ],
+        [
+          "shis",
+          "his"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "shishis",
+        "bottom": "shishis",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "su",
+          "sus"
+        ],
+        [
+          "us",
+          "usu"
+        ],
+        [
+          "sus",
+          "us"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "susus",
+        "bottom": "susus",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "s",
+          "ss"
+        ],
+        [
+          "ss",
+          "s"
+        ],
+        [
+          "u",
+          "uu"
+        ],
+        [
+          "uu",
+          "u"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 0.0035047531127929688,
+      "solution_length": 20,
+      "difficulty_score": 7,
+      "solution_string": {
+        "top": "ssssssssssssssssssssssssssssss",
+        "bottom": "ssssssssssssssssssssssssssssss",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "shi",
+          "shis"
+        ],
+        [
+          "his",
+          "hish"
+        ],
+        [
+          "shis",
+          "his"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "shishis",
+        "bottom": "shishis",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "su",
+          "sus"
+        ],
+        [
+          "us",
+          "usu"
+        ],
+        [
+          "sus",
+          "us"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        2
+      ],
+      "search_time": 0.0,
+      "solution_length": 2,
+      "difficulty_score": 3,
+      "solution_string": {
+        "top": "susus",
+        "bottom": "susus",
+        "match": true
+      }
+    }
+  ],
+  "created_at": "2025-08-29 01:13:20"
+}

@@ -1,0 +1,173 @@
+{
+  "name": "beginner_alphabet",
+  "difficulty": "easy",
+  "theme": "alphabet",
+  "total_problems": 5,
+  "solvable_problems": 3,
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "b",
+          "bb"
+        ],
+        [
+          "bb",
+          "b"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 0.002007722854614258,
+      "solution_length": 20,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "bottom": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "b",
+          "bb"
+        ],
+        [
+          "bb",
+          "b"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 0.0025167465209960938,
+      "solution_length": 20,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "bottom": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "match": true
+      }
+    },
+    {
+      "dominoes": [
+        [
+          "x",
+          "xy"
+        ],
+        [
+          "y",
+          "x"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 6
+    },
+    {
+      "dominoes": [
+        [
+          "a",
+          "ab"
+        ],
+        [
+          "b",
+          "a"
+        ]
+      ],
+      "has_solution": false,
+      "solution": null,
+      "search_time": 0.0,
+      "solution_length": null,
+      "difficulty_score": 6
+    },
+    {
+      "dominoes": [
+        [
+          "a",
+          "aa"
+        ],
+        [
+          "aa",
+          "a"
+        ]
+      ],
+      "has_solution": true,
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_time": 0.001997709274291992,
+      "solution_length": 20,
+      "difficulty_score": 4,
+      "solution_string": {
+        "top": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bottom": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "match": true
+      }
+    }
+  ],
+  "created_at": "2025-08-29 01:13:20"
+}
