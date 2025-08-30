@@ -72,7 +72,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           // 合体表示 (300ms)
           setTimeout(() => {
             setPairAnimation(prev => prev ? { ...prev, phase: 'fading' } : null);
-          }, 900);
+          }, 700);
           
           // フェードアウトして消去完了
           setTimeout(() => {
@@ -80,7 +80,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             setTopBelt(result.newTopBelt);
             setBottomBelt(result.newBottomBelt);
             setIsShipping(false);
-          }, 1500);
+          }, 1200);
         } else {
           // ペアがない場合、クリア判定
           if (isCleared(topBelt, bottomBelt)) {
