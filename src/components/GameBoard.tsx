@@ -14,6 +14,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   const [topBelt, setTopBelt] = useState(problem.initialState.topBelt);
   const [bottomBelt, setBottomBelt] = useState(problem.initialState.bottomBelt);
   const [isShipping, setIsShipping] = useState(false);
+  const [newTopItemsCount, setNewTopItemsCount] = useState(0);
+  const [newBottomItemsCount, setNewBottomItemsCount] = useState(0);
 
   const handleTileClick = (tileIndex: number) => {
     if (isShipping) return; // 出荷中は操作を無効化
@@ -25,6 +27,16 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setSelectedTiles(newSelected);
     setTopBelt(newTop);
     setBottomBelt(newBottom);
+    
+    // 新しく追加されたアイテムの数を設定
+    setNewTopItemsCount(problem.tiles[tileIndex].top.length);
+    setNewBottomItemsCount(problem.tiles[tileIndex].bottom.length);
+    
+    // アニメーション後にリセット
+    setTimeout(() => {
+      setNewTopItemsCount(0);
+      setNewBottomItemsCount(0);
+    }, 500);
   };
 
   // ペア消去とクリア判定のuseEffect
@@ -69,6 +81,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setSelectedTiles([]);
     setTopBelt(problem.initialState.topBelt);
     setBottomBelt(problem.initialState.bottomBelt);
+    setNewTopItemsCount(0);
+    setNewBottomItemsCount(0);
   };
 
   const handleImpossible = () => {
@@ -108,17 +122,17 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           {/* 上のベルト */}
           <div
             className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
-            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "69%", left: "11%" }}
+            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "69%", left: "11%", containerType: "inline-size"}}
           >
-            {renderGameString(topBelt, isShipping, "relative")}
+            {renderGameString(topBelt, isShipping, "relative", newTopItemsCount)}
           </div>
           
           {/* 下のベルト */}
           <div 
             className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
-            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "80%", left: "26.5%" }}
+            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "80%", left: "26.5%", containerType: "inline-size" }}
           >
-            {renderGameString(bottomBelt, isShipping, "relative")}
+            {renderGameString(bottomBelt, isShipping, "relative", newBottomItemsCount)}
           </div>
         </div>
 

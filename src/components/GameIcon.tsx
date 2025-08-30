@@ -5,9 +5,10 @@ interface GameIconProps {
   type: 'sashimi' | 'tampopo';
   size?: 'small' | 'medium' | 'large' | 'relative';
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export const GameIcon = ({ type, size = 'medium', className = '' }: GameIconProps) => {
+export const GameIcon = ({ type, size = 'medium', className = '', style }: GameIconProps) => {
   const sizeClasses = {
     small: 'w-6 h-6',
     medium: 'w-8 h-8', 
@@ -23,6 +24,7 @@ export const GameIcon = ({ type, size = 'medium', className = '' }: GameIconProp
       src={src} 
       alt={alt}
       className={`inline-block ${sizeClasses[size]} ${className}`}
+      style={style}
     />
   );
 };
