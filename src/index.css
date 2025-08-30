@@ -41,19 +41,19 @@ body {
 }
 
 .conveyor-content {
-  animation: conveyor-slide 3s ease-in-out;
+  animation: conveyor-slide 0.7s ease;
 }
 
 @keyframes conveyor-slide {
   0% {
-    transform: translateX(-20px);
+    transform: translate(76px, -32px) rotate(-22.5deg);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
   100% {
-    transform: translateX(0);
+    transform: translate(0, 0) rotate(-22.5deg);
     opacity: 1;
   }
 }
