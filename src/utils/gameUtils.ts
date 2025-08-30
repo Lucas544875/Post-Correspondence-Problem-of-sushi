@@ -2,7 +2,7 @@ import React from 'react';
 import { GameIcon } from '../components/GameIcon';
 
 // 文字列を画像アイコンの配列に変換（アニメーション用のクラスを指定可能）
-export const renderGameString = (str: string, isShipping?: boolean): React.ReactNode[] => {
+export const renderGameString = (str: string, isShipping?: boolean, size: 'small' | 'medium' | 'large' | 'relative' = 'medium'): React.ReactNode[] => {
   return Array.from(str).map((char, index) => {
     const isHead = index === 0;
     const className = `mx-1 ${isShipping && isHead ? 'pair-shipping-head' : isShipping && !isHead ? 'slide-forward' : ''}`;
@@ -11,14 +11,14 @@ export const renderGameString = (str: string, isShipping?: boolean): React.React
       return React.createElement(GameIcon, { 
         key: index, 
         type: 'sashimi', 
-        size: 'medium', 
+        size: size, 
         className 
       });
     } else if (char === 'T') {
       return React.createElement(GameIcon, { 
         key: index, 
         type: 'tampopo', 
-        size: 'medium', 
+        size: size, 
         className 
       });
     }

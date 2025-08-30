@@ -77,8 +77,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-green-100 p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 p-8">
+      <div className="max-w-7xl mx-auto ">
         {/* ヘッダー */}
         <div className="flex items-center justify-between mb-8">
           <button
@@ -99,46 +99,26 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         </div>
 
         {/* ベルトコンベア表示エリア */}
-        <div className="mb-8 space-y-6">
+        <div className="mb-8 space-y-6 relative"> {/* 画面サイズ依存 */}
+          <img 
+            src="/src/assets/conveyors.png" 
+            alt="conveyor belt"
+            className="inset-0 w-full object-cover z-10"
+          />
           {/* 上のベルト */}
-          <div className="relative">
-            <div className="text-lg font-bold mb-2 text-yellow-600">上のベルト</div>
-            <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
-              <div className="conveyor-track bg-gray-800 p-4">
-                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
-                  <div className="conveyor-content flex items-center">
-                    {topBelt ? renderGameString(topBelt, isShipping) : <span className="text-gray-400">（空のレーン）</span>}
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div
+            className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
+            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "69%", left: "11%" }}
+          >
+            {renderGameString(topBelt, isShipping, "relative")}
           </div>
           
           {/* 下のベルト */}
-          <div className="relative">
-            <div className="text-lg font-bold mb-2 text-red-600">下のベルト</div>
-            <div className="conveyor-belt bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg overflow-hidden">
-              <div className="conveyor-track bg-gray-800 p-4">
-                <div className="bg-white rounded p-4 min-h-[4rem] flex items-center text-2xl">
-                  <div className="conveyor-content flex items-center">
-                    {bottomBelt ? renderGameString(bottomBelt, isShipping) : <span className="text-gray-400">（空のレーン）</span>}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* レーン状況表示 */}
-          <div className="text-center p-4 bg-blue-100 rounded-lg">
-            <div className="text-lg font-bold mb-2">
-              {isShipping ? '🚚 商品を出荷中...' : 
-               topBelt.length === 0 && bottomBelt.length === 0 ? '✅ 全レーンが空になりました！' : 
-               '🎯 刺身とタンポポをペアにして出荷しよう'}
-            </div>
-            <div className="text-sm text-gray-600 flex justify-center space-x-4">
-              <div>上レーン: {topBelt.length === 0 ? '空' : `${topBelt.length}個`}</div>
-              <div>下レーン: {bottomBelt.length === 0 ? '空' : `${bottomBelt.length}個`}</div>
-            </div>
+          <div 
+            className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
+            style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "80%", left: "26.5%" }}
+          >
+            {renderGameString(bottomBelt, isShipping, "relative")}
           </div>
         </div>
 
@@ -174,21 +154,6 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             >
               ❌ この問題は解けない
             </button>
-          </div>
-        )}
-
-        {/* 選択履歴 */}
-        {selectedTiles.length > 0 && (
-          <div className="mt-8 text-center">
-            <div className="text-gray-600 mb-2">選択したタイル:</div>
-            <div className="text-lg">
-              {selectedTiles.map((tileIndex, i) => (
-                <span key={i} className="mx-1">
-                  タイル{tileIndex + 1}
-                  {i < selectedTiles.length - 1 ? ' → ' : ''}
-                </span>
-              ))}
-            </div>
           </div>
         )}
       </div>
