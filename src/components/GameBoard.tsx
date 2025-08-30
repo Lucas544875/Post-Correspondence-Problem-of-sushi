@@ -77,10 +77,10 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 p-8">
-      <div className="max-w-7xl mx-auto ">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 pt-8 px-8">
+      <div className="max-w-6xl mx-auto ">
         {/* ヘッダー */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between">
           <button
             onClick={() => onNavigate('problem-select')}
             className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
@@ -99,11 +99,11 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         </div>
 
         {/* ベルトコンベア表示エリア */}
-        <div className="mb-8 space-y-6 relative"> {/* 画面サイズ依存 */}
+        <div className="mb-4 space-y-6 relative"> {/* 画面サイズ依存 */}
           <img 
             src="/src/assets/conveyors.png" 
             alt="conveyor belt"
-            className="inset-0 w-full object-cover z-10"
+            className="w-full object-cover z-10 mb-0"
           />
           {/* 上のベルト */}
           <div
@@ -123,26 +123,23 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         </div>
 
         {/* タイルボタン */}
-        <div className="mb-8">
-          <div className="text-xl font-bold mb-4 text-center">タイルを選択してください</div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
-            {problem.tiles.map((tile, index) => (
-              <button
-                key={tile.id}
-                onClick={() => handleTileClick(index)}
-                className="tile-button bg-white hover:bg-gray-50 border-4 border-orange-300 hover:border-orange-500 rounded-lg p-4"
-              >
-                <div className="text-center">
-                  <div className="text-lg font-bold text-yellow-600 mb-2 flex items-center justify-center">
-                    上: <div className="ml-2 flex">{renderGameString(tile.top)}</div>
-                  </div>
-                  <div className="text-lg font-bold text-red-600 flex items-center justify-center">
-                    下: <div className="ml-2 flex">{renderGameString(tile.bottom)}</div>
-                  </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto m-12">
+          {problem.tiles.map((tile, index) => (
+            <button
+              key={tile.id}
+              onClick={() => handleTileClick(index)}
+              className="tile-button bg-white hover:bg-gray-50 border-4 border-orange-300 hover:border-orange-500 rounded-lg p-4"
+            >
+              <div className="text-center">
+                <div className="text-lg font-bold text-yellow-600 mb-2 flex items-center justify-center">
+                  上: <div className="ml-2 flex">{renderGameString(tile.top)}</div>
                 </div>
-              </button>
-            ))}
-          </div>
+                <div className="text-lg font-bold text-red-600 flex items-center justify-center">
+                  下: <div className="ml-2 flex">{renderGameString(tile.bottom)}</div>
+                </div>
+              </div>
+            </button>
+          ))}
         </div>
 
         {/* 決定不能モード用の不可能ボタン */}
