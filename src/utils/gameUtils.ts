@@ -2,7 +2,7 @@ import React from 'react';
 import { GameIcon } from '../components/GameIcon';
 
 // 文字列を画像アイコンの配列に変換（アニメーション用のクラスを指定可能）
-export const renderGameString = (str: string, isShipping?: boolean, size: 'small' | 'medium' | 'large' | 'relative' = 'medium', newItemsCount?: number): React.ReactNode[] => {
+export const renderGameString = (str: string, isShipping?: boolean, size: 'small' | 'medium' | 'large' | 'relative' = 'medium', newItemsCount?: number, hidePairHead?: boolean): React.ReactNode[] => {
   const existingItemsCount = str.length - (newItemsCount || 0);
   // max-w-12 (48px) + mx-1 (8px margin) = 56px per item
   const itemWidthPx = 56;
@@ -10,6 +10,11 @@ export const renderGameString = (str: string, isShipping?: boolean, size: 'small
   return Array.from(str).map((char, index) => {
     const isHead = index === 0;
     const isNewItem = newItemsCount && index >= str.length - newItemsCount;
+    
+    // ペアアニメーション中は先頭アイテムを非表示
+    if (hidePairHead && isHead) {
+      return null;
+    }
     
     // 既存アイテムが占める幅を計算してスライド距離を決定
     const existingWidth = existingItemsCount * itemWidthPx;
@@ -25,18 +30,11 @@ export const renderGameString = (str: string, isShipping?: boolean, size: 'small
       '--slide-distance': slideDistance
     } as React.CSSProperties : {};
     
-    if (char === 'S') {
+    if (char === 'S' || char === 'T') {
+      const iconType = getIconType(char, isShipping && isHead);
       return React.createElement(GameIcon, { 
         key: `${index}-${char}`, 
-        type: 'sashimi', 
-        size: size, 
-        className,
-        style
-      });
-    } else if (char === 'T') {
-      return React.createElement(GameIcon, { 
-        key: `${index}-${char}`, 
-        type: 'tampopo', 
+        type: iconType!, 
         size: size, 
         className,
         style
@@ -47,11 +45,12 @@ export const renderGameString = (str: string, isShipping?: boolean, size: 'small
       className: isShipping && !isHead ? 'slide-forward' : isNewItem ? 'belt-item-enter' : '',
       style
     }, char);
-  });
+  }).filter(Boolean);
 };
 
 // 文字を画像タイプに変換
-export const getIconType = (char: string): 'sashimi' | 'tampopo' | null => {
+export const getIconType = (char: string, isShippingHead?: boolean): 'sashimi' | 'tampopo' | 'tampopo_on_sashimi' | null => {
+  if (isShippingHead) return 'tampopo_on_sashimi';
   if (char === 'S') return 'sashimi';
   if (char === 'T') return 'tampopo';
   return null;

@@ -1,8 +1,9 @@
 import sashimiImg from '../assets/sashimi.png';
 import tampopoImg from '../assets/tampopo.png';
+import tampopoOnSashimiImg from '../assets/tampopo_on_sashimi.png';
 
 interface GameIconProps {
-  type: 'sashimi' | 'tampopo';
+  type: 'sashimi' | 'tampopo' | 'tampopo_on_sashimi';
   size?: 'small' | 'medium' | 'large' | 'relative';
   className?: string;
   style?: React.CSSProperties;
@@ -16,8 +17,12 @@ export const GameIcon = ({ type, size = 'medium', className = '', style }: GameI
     relative: "max-w-12 max-h-12 min-w-0",
   };
 
-  const src = type === 'sashimi' ? sashimiImg : tampopoImg;
-  const alt = type === 'sashimi' ? '刺身' : 'タンポポ';
+  const src = type === 'sashimi' ? sashimiImg : 
+               type === 'tampopo' ? tampopoImg : 
+               tampopoOnSashimiImg;
+  const alt = type === 'sashimi' ? '刺身' : 
+              type === 'tampopo' ? 'タンポポ' : 
+              'タンポポ寿司';
 
   return (
     <img 
