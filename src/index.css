@@ -74,7 +74,7 @@ body {
 
 /* 新しいアイテム追加時のアニメーション */
 .belt-item-enter {
-  animation: belt-item-slide 0.5s ease;
+  animation: belt-item-slide 0.3s ease;
 }
 
 @keyframes belt-item-slide {
@@ -118,7 +118,7 @@ body {
 
 /* 後続要素が前に詰めるアニメーション */
 .slide-forward {
-  animation: slide-to-front 1.2s ease-in-out forwards;
+  animation: slide-to-front 0.8s ease-in-out forwards;
 }
 
 @keyframes slide-to-front {
@@ -146,7 +146,7 @@ body {
 
 /* 新しいペアアニメーション - 上のベルトから中央へ */
 .pair-item-top-moving {
-  animation: move-from-top 0.6s ease-in forwards;
+  animation: move-from-top 0.4s ease-in forwards;
 }
 
 @keyframes move-from-top {
@@ -165,7 +165,7 @@ body {
 
 /* 新しいペアアニメーション - 下のベルトから中央へ */
 .pair-item-bottom-moving {
-  animation: move-from-bottom 0.6s ease-in forwards;
+  animation: move-from-bottom 0.4s ease-in forwards;
 }
 
 @keyframes move-from-bottom {
@@ -220,7 +220,7 @@ body {
 
 /* 合体後アイテムの出現アニメーション */
 .pair-merged-item {
-  animation: merged-item-appear 0.6s ease-out;
+  animation: merged-item-appear 0.4s ease-out;
 }
 
 @keyframes merged-item-appear {
@@ -239,7 +239,7 @@ body {
 
 /* 合体後アイテムのフェードアウト */
 .pair-merged-item-fade {
-  animation: merged-item-fade 0.6s ease-in-out forwards;
+  animation: merged-item-fade 0.4s ease-in-out forwards;
 }
 
 @keyframes merged-item-fade {
@@ -260,10 +260,10 @@ body {
 
 /* 合体要素の出現アニメーション */
 .merged-element-appear {
-  animation: merged-item-appear 0.6s ease-out;
+  animation: merged-item-appear 0.4s ease-out;
 }
 
 /* 合体要素のフェードアウトアニメーション */
 .merged-element-fade {
-  animation: merged-item-fade 0.6s ease-in-out forwards;
+  animation: merged-item-fade 0.4s ease-in-out forwards;
 }

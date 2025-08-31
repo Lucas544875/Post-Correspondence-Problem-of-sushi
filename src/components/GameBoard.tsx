@@ -54,7 +54,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
       setTimeout(() => {
         setNewTopItemsCount(0);
         setNewBottomItemsCount(0);
-      }, 500);
+      }, 300);
     }
   };
 
@@ -81,7 +81,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     setTimeout(() => {
       setNewTopItemsCount(0);
       setNewBottomItemsCount(0);
-    }, 500);
+    }, 300);
   };
 
   // ペア消去とクリア判定のuseEffect
@@ -91,7 +91,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     
     // 新しいアイテム追加アニメーションの完了を待つ
     const hasNewItems = newTopItemsCount > 0 || newBottomItemsCount > 0;
-    const animationDelay = hasNewItems ? 500 : 0;
+    const animationDelay = hasNewItems ? 300 : 0;
     
     setTimeout(() => {
       if (animationPhase !== 'idle') return;
@@ -121,7 +121,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           // タイムアウトを管理するための配列
           const timeouts: number[] = [];
 
-          // Phase 2: 合体表示から出荷フェーズへ (600ms後)
+          // Phase 2: 合体表示から出荷フェーズへ (400ms後)
           const timeout1 = setTimeout(() => {
             // フェードアウト + スライドフォワードフェーズ
             setAnimationPhase('shipping');
@@ -134,10 +134,10 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             
             // setTopAnimations(shippingTopAnimations);
             // setBottomAnimations(shippingBottomAnimations);
-          }, 600);
+          }, 400);
           timeouts.push(timeout1);
           
-          // アニメーション完了、状態更新 (600ms後 + merged-item-fadeの時間)
+          // アニメーション完了、状態更新 (400ms後 + merged-item-fadeの時間)
           const timeout2 = setTimeout(() => {
             setTopAnimations([]);
             setBottomAnimations([]);
@@ -148,7 +148,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             setBottomBelt(result.newBottomBelt);
             setPendingFinalState(null);
             setAnimationTimeouts([]);
-          }, 1200);
+          }, 800);
           timeouts.push(timeout2);
 
           // タイムアウトを状態に保存
