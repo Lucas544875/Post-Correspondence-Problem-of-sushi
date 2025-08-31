@@ -123,10 +123,10 @@ body {
 
 @keyframes slide-to-front {
   0% {
-    transform: translateX(56px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(var(--empty-space, -56px));
   }
 }
 
@@ -151,14 +151,14 @@ body {
 
 @keyframes move-from-top {
   0% {
-    transform: rotate(-22.5deg) translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
   50% {
     opacity: 1;
   }
   100% {
-    transform: rotate(-22.5deg) translateY(55px) translateX(75px);
+    transform: translateY(55px) translateX(75px);
     opacity: 0;
   }
 }
@@ -170,14 +170,14 @@ body {
 
 @keyframes move-from-bottom {
   0% {
-    transform: rotate(-22.5deg) translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
   50% {
     opacity: 1;
   }
   100% {
-    transform: rotate(-22.5deg) translateY(-55px) translateX(-40px);
+    transform: translateY(-55px) translateX(-40px);
     opacity: 0;
   }
 }
@@ -220,17 +220,20 @@ body {
 
 /* 合体後アイテムの出現アニメーション */
 .pair-merged-item {
-  animation: merged-item-appear 0.3s ease-out;
+  animation: merged-item-appear 0.6s ease-out;
 }
 
 @keyframes merged-item-appear {
   0% {
     opacity: 0;
-    transform: rotate(-22.5deg);
+    /* transform: rotate(-22.5deg); */
+  }
+  50% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: rotate(-22.5deg);
+    /* transform: rotate(-22.5deg); */
   }
 }
 
@@ -242,18 +245,25 @@ body {
 @keyframes merged-item-fade {
   0% {
     opacity: 1;
-    transform: rotate(-22.5deg) translateX(0);
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(-22.5deg);
   }
   100% {
     opacity: 1;
-    transform: rotate(-22.5deg) translateX(-100px);
+    translate: -100px 41px;
   }
 }
 
 .pair-item-invisible {
   opacity: 0;
+}
+
+/* 合体要素専用のアニメーション */
+
+/* 合体要素の出現アニメーション */
+.merged-element-appear {
+  animation: merged-item-appear 0.6s ease-out;
+}
+
+/* 合体要素のフェードアウトアニメーション */
+.merged-element-fade {
+  animation: merged-item-fade 0.6s ease-in-out forwards;
 }

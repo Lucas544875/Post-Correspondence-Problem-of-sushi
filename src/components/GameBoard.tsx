@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import type { Problem, Screen } from '../types';
-import { renderGameString } from '../utils/gameUtils';
-import { removePairs, isCleared } from '../utils/pairLogic';
+import { renderGameString, type ElementAnimation } from '../utils/gameUtils';
+import { removeAllPairs, isCleared, type MergedElement } from '../utils/pairLogic';
+import { GameIcon } from './GameIcon';
 
 interface GameBoardProps {
   problem: Problem;
@@ -16,15 +17,12 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   const [isShipping, setIsShipping] = useState(false);
   const [newTopItemsCount, setNewTopItemsCount] = useState(0);
   const [newBottomItemsCount, setNewBottomItemsCount] = useState(0);
-  const [pairAnimation, setPairAnimation] = useState<{
-    topChar: string;
-    bottomChar: string;
-    phase: 'moving' | 'merging' | 'fading';
-  } | null>(null);
+  const [topAnimations, setTopAnimations] = useState<ElementAnimation[]>([]);
+  const [bottomAnimations, setBottomAnimations] = useState<ElementAnimation[]>([]);
+  const [animationPhase, setAnimationPhase] = useState<'idle' | 'merging' | 'shipping'>('idle');
+  const [mergedElements, setMergedElements] = useState<MergedElement[]>([]);
 
   const handleTileClick = (tileIndex: number) => {
-    if (isShipping) return; // 出荷中は操作を無効化
-
     const newSelected = [...selectedTiles, tileIndex];
     const newTop = topBelt + problem.tiles[tileIndex].top;
     const newBottom = bottomBelt + problem.tiles[tileIndex].bottom;
@@ -46,40 +44,61 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
 
   // ペア消去とクリア判定のuseEffect
   useEffect(() => {
+    // アニメーション実行中は処理をスキップ
+    if (animationPhase !== 'idle') return;
+    
     // 新しいアイテム追加アニメーションの完了を待つ
     const hasNewItems = newTopItemsCount > 0 || newBottomItemsCount > 0;
     const animationDelay = hasNewItems ? 500 : 0;
     
     setTimeout(() => {
+      if (animationPhase !== 'idle') return;
+      
       if (topBelt.length > 0 && bottomBelt.length > 0) {
-        const result = removePairs(topBelt, bottomBelt);
+        const result = removeAllPairs(topBelt, bottomBelt);
         
         if (result.hasRemovals) {
-          // ペアアニメーション開始
-          const pair = result.removedPairs[0];
-          setPairAnimation({ 
-            topChar: pair.top, 
-            bottomChar: pair.bottom, 
-            phase: 'moving' 
-          });
+          // 複数ペア同時消去アニメーション開始
           setIsShipping(true);
+          setAnimationPhase('merging');
+          // setIsShipping(true);
           
-          // 中央に移動 (600ms)
+          // Phase 1 & 2: 中央移動 + 合体表示を同時開始 (600ms)
+          // move-from-top/bottom と merged-appear を同時に設定
+          // const initialAnimations = result.topAnimations.map(anim => 
+          //   anim.state === 'move-from-top' ? { ...anim, state: 'merged-appear' as const } : anim
+          // );
+          // const initialBottomAnimations = result.bottomAnimations.map(anim => 
+          //   anim.state === 'move-from-bottom' ? { ...anim, state: 'merged-appear' as const } : anim
+          // );
+          
+          setTopAnimations(result.topAnimations);
+          setBottomAnimations(result.bottomAnimations);
+          setMergedElements(result.mergedElements);
+          // Phase 2: 合体表示から出荷フェーズへ (600ms後)
           setTimeout(() => {
-            setPairAnimation(prev => prev ? { ...prev, phase: 'merging' } : null);
+            // フェードアウト + スライドフォワードフェーズ
+            setAnimationPhase('shipping');
+            // const shippingTopAnimations = result.topAnimations.map(anim => 
+            //   anim.state === 'move-from-top' ? { ...anim, state: 'merged-fade' as const } : anim
+            // );
+            // const shippingBottomAnimations = result.bottomAnimations.map(anim => 
+            //   anim.state === 'move-from-bottom' ? { ...anim, state: 'merged-fade' as const } : anim
+            // );
+            
+            // setTopAnimations(shippingTopAnimations);
+            // setBottomAnimations(shippingBottomAnimations);
           }, 600);
           
-          // 合体表示 (300ms)
+          // アニメーション完了、状態更新 (600ms後 + merged-item-fadeの時間)
           setTimeout(() => {
-            setPairAnimation(prev => prev ? { ...prev, phase: 'fading' } : null);
-          }, 700);
-          
-          // フェードアウトして消去完了
-          setTimeout(() => {
-            setPairAnimation(null);
+            setTopAnimations([]);
+            setBottomAnimations([]);
+            setMergedElements([]);
+            setIsShipping(false);
+            setAnimationPhase('idle');
             setTopBelt(result.newTopBelt);
             setBottomBelt(result.newBottomBelt);
-            setIsShipping(false);
           }, 1200);
         } else {
           // ペアがない場合、クリア判定
@@ -100,7 +119,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         }
       }
     }, animationDelay);
-  }, [topBelt, bottomBelt, newTopItemsCount, newBottomItemsCount, onClear, onNavigate]);
+  }, [topBelt, bottomBelt, newTopItemsCount, newBottomItemsCount, animationPhase, onClear, onNavigate]);
 
   const handleClearAll = () => {
     setSelectedTiles([]);
@@ -149,7 +168,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
             style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "69%", left: "11%", containerType: "inline-size"}}
           >
-            {renderGameString(topBelt, isShipping, "relative", newTopItemsCount, !!pairAnimation)}
+            {renderGameString(topBelt, isShipping, "relative", newTopItemsCount, false, topAnimations)}
           </div>
           
           {/* 下のベルト */}
@@ -157,81 +176,32 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             className="conveyor-content flex items-center z-20 absolute mb-0 w-[52%] min-h-12"
             style={{ transformOrigin: "left", transform: 'rotate(-22.5deg)', top: "80%", left: "26.5%", containerType: "inline-size" }}
           >
-            {renderGameString(bottomBelt, isShipping, "relative", newBottomItemsCount, !!pairAnimation)}
+            {renderGameString(bottomBelt,isShipping, "relative", newBottomItemsCount, false, bottomAnimations)}
           </div>
           
-          {/* ペアアニメーション表示 */}
-          {pairAnimation && (
-            <div className="absolute inset-0 z-30">
-              {/* 上のアイテム */}
-              <div 
-                className={`absolute w-12 h-12 ${
-                  pairAnimation.phase === 'moving' ? 'pair-item-top-moving' : 'pair-item-invisible'
-                }`}
-                style={{ 
-                  top: '69%', 
-                  left: '11%'
-                }}
-              >
-                <img 
-                  src={`/src/assets/${pairAnimation.topChar === 'S' ? 'sashimi' : 'tampopo'}.png`} 
-                  alt={pairAnimation.topChar}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              {/* 下のアイテム */}
-              <div 
-                className={`absolute w-12 h-12 ${
-                  pairAnimation.phase === 'moving' ? 'pair-item-bottom-moving' : "pair-item-invisible"
-                }`}
-                style={{ 
-                  top: '80%', 
-                  left: '26.5%'
-                }}
-              >
-                <img 
-                  src={`/src/assets/${pairAnimation.bottomChar === 'S' ? 'sashimi' : 'tampopo'}.png`} 
-                  alt={pairAnimation.bottomChar}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              {/* 合体後のアイテム */}
-              {pairAnimation.phase === 'merging' && (
-                <div 
-                  className="absolute w-16 h-16 pair-merged-item"
-                  style={{ 
-                    top: 'calc(75.25% - 24px)', 
-                    left: 'calc(18.75% - 10px)'
-                  }}
-                >
-                  <img 
-                    src="/src/assets/tampopo_on_sashimi.png" 
-                    alt="tampopo on sashimi"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              )}
-              
-              {/* フェードアウト時の合体アイテム */}
-              {pairAnimation.phase === 'fading' && (
-                <div 
-                  className="absolute w-16 h-16 pair-merged-item-fade"
-                  style={{ 
-                    top: 'calc(75.25% - 24px)', 
-                    left: 'calc(18.75% - 10px)'
-                  }}
-                >
-                  <img 
-                    src="/src/assets/tampopo_on_sashimi.png" 
-                    alt="tampopo on sashimi"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              )}
+          {/* 合体要素の表示 */}
+          {mergedElements.map((element) => {
+            // console.log(56 * element.pairIndex);
+            return <div
+              key={element.id}
+              className={`absolute w-12 h-12 z-30 ${
+                animationPhase === 'merging' ? 'merged-element-appear' : 
+                animationPhase === 'shipping' ? 'merged-element-fade' : ''
+              }`}
+              style={{
+                left: `${element.position.x}%`,
+                top: `${element.position.y}%`,
+                rotate: '-22.5deg',
+                transform: `translateX(${56 * element.pairIndex}px)`,
+              }}
+            >
+              <GameIcon
+                type="tampopo_on_sashimi"
+                size="relative"
+                className="w-full h-full"
+              />
             </div>
-          )}
+          })}
         </div>
 
         {/* タイルボタン */}
