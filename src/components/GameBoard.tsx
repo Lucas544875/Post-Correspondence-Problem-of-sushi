@@ -10,8 +10,18 @@ interface GameBoardProps {
   onClear: () => void;
 }
 
+// ベルトの状態履歴を管理するインターフェース
+interface BeltState {
+  topBelt: string;
+  bottomBelt: string;
+}
+
 export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
-  const [selectedTiles, setSelectedTiles] = useState<number[]>([]);
+  const [beltHistory, setBeltHistory] = useState<BeltState[]>([{
+    topBelt: problem.initialState.topBelt,
+    bottomBelt: problem.initialState.bottomBelt
+  }]);
+  const [currentHistoryIndex, setCurrentHistoryIndex] = useState(0);
   const [topBelt, setTopBelt] = useState(problem.initialState.topBelt);
   const [bottomBelt, setBottomBelt] = useState(problem.initialState.bottomBelt);
   const [isShipping, setIsShipping] = useState(false);
@@ -65,11 +75,17 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
       return;
     }
 
-    const newSelected = [...selectedTiles, tileIndex];
     const newTop = topBelt + problem.tiles[tileIndex].top;
     const newBottom = bottomBelt + problem.tiles[tileIndex].bottom;
     
-    setSelectedTiles(newSelected);
+    // 新しい状態を履歴に追加
+    const _newState = removeAllPairs(newTop, newBottom);
+    const newState = { topBelt: _newState.newTopBelt, bottomBelt: _newState.newBottomBelt};
+    const newHistory = beltHistory.slice(0, currentHistoryIndex + 1);
+    newHistory.push(newState);
+    setBeltHistory(newHistory);
+    setCurrentHistoryIndex(newHistory.length - 1);
+    
     setTopBelt(newTop);
     setBottomBelt(newBottom);
     
@@ -82,6 +98,19 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
       setNewTopItemsCount(0);
       setNewBottomItemsCount(0);
     }, 300);
+
+    console.log(newHistory)
+  };
+
+  // 一手戻る機能
+  const handleUndo = () => {
+    if (currentHistoryIndex > 0 && animationPhase === 'idle') {
+      const newIndex = currentHistoryIndex - 1;
+      const previousState = beltHistory[newIndex];
+      setCurrentHistoryIndex(newIndex);
+      setTopBelt(previousState.topBelt);
+      setBottomBelt(previousState.bottomBelt);
+    }
   };
 
   // ペア消去とクリア判定のuseEffect
@@ -103,16 +132,6 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           // 複数ペア同時消去アニメーション開始
           setIsShipping(true);
           setAnimationPhase('merging');
-          // setIsShipping(true);
-          
-          // Phase 1 & 2: 中央移動 + 合体表示を同時開始 (600ms)
-          // move-from-top/bottom と merged-appear を同時に設定
-          // const initialAnimations = result.topAnimations.map(anim => 
-          //   anim.state === 'move-from-top' ? { ...anim, state: 'merged-appear' as const } : anim
-          // );
-          // const initialBottomAnimations = result.bottomAnimations.map(anim => 
-          //   anim.state === 'move-from-bottom' ? { ...anim, state: 'merged-appear' as const } : anim
-          // );
           
           setTopAnimations(result.topAnimations);
           setBottomAnimations(result.bottomAnimations);
@@ -125,15 +144,6 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           const timeout1 = setTimeout(() => {
             // フェードアウト + スライドフォワードフェーズ
             setAnimationPhase('shipping');
-            // const shippingTopAnimations = result.topAnimations.map(anim => 
-            //   anim.state === 'move-from-top' ? { ...anim, state: 'merged-fade' as const } : anim
-            // );
-            // const shippingBottomAnimations = result.bottomAnimations.map(anim => 
-            //   anim.state === 'move-from-bottom' ? { ...anim, state: 'merged-fade' as const } : anim
-            // );
-            
-            // setTopAnimations(shippingTopAnimations);
-            // setBottomAnimations(shippingBottomAnimations);
           }, 400);
           timeouts.push(timeout1);
           
@@ -179,7 +189,12 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     if (animationPhase !== 'idle') {
       cancelAnimationsAndApplyFinalState();
     }
-    setSelectedTiles([]);
+    // 履歴を初期状態にリセット
+    setBeltHistory([{
+      topBelt: problem.initialState.topBelt,
+      bottomBelt: problem.initialState.bottomBelt
+    }]);
+    setCurrentHistoryIndex(0);
     setTopBelt(problem.initialState.topBelt);
     setBottomBelt(problem.initialState.bottomBelt);
     setNewTopItemsCount(0);
@@ -206,12 +221,25 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           <h1 className="text-3xl font-bold text-gray-800">
             問題 {problem.id}
           </h1>
-          <button
-            onClick={handleClearAll}
-            className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
-          >
-            リセット
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={handleUndo}
+              disabled={currentHistoryIndex === 0 || animationPhase !== 'idle'}
+              className={`font-bold py-2 px-4 rounded ${
+                currentHistoryIndex === 0 || animationPhase !== 'idle'
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-blue-500 hover:bg-blue-600 text-white'
+              }`}
+            >
+              ↶ 戻る
+            </button>
+            <button
+              onClick={handleClearAll}
+              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
+            >
+              リセット
+            </button>
+          </div>
         </div>
 
         {/* ベルトコンベア表示エリア */}
