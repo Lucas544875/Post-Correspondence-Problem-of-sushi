@@ -21,8 +21,50 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   const [bottomAnimations, setBottomAnimations] = useState<ElementAnimation[]>([]);
   const [animationPhase, setAnimationPhase] = useState<'idle' | 'merging' | 'shipping'>('idle');
   const [mergedElements, setMergedElements] = useState<MergedElement[]>([]);
+  const [animationTimeouts, setAnimationTimeouts] = useState<number[]>([]);
+  const [pendingFinalState, setPendingFinalState] = useState<{
+    topBelt: string;
+    bottomBelt: string;
+    newTopItemsCount: number;
+    newBottomItemsCount: number;
+  } | null>(null);
+
+  // アニメーションをキャンセルして最終状態を適用
+  const cancelAnimationsAndApplyFinalState = () => {
+    // 全てのタイムアウトをキャンセル
+    animationTimeouts.forEach(timeout => clearTimeout(timeout));
+    setAnimationTimeouts([]);
+    
+    // アニメーション状態をリセット
+    setTopAnimations([]);
+    setBottomAnimations([]);
+    setMergedElements([]);
+    setAnimationPhase('idle');
+    setIsShipping(false);
+    
+    // 保留中の最終状態があれば適用
+    if (pendingFinalState) {
+      setTopBelt(pendingFinalState.topBelt);
+      setBottomBelt(pendingFinalState.bottomBelt);
+      setNewTopItemsCount(pendingFinalState.newTopItemsCount);
+      setNewBottomItemsCount(pendingFinalState.newBottomItemsCount);
+      setPendingFinalState(null);
+      
+      // 新規アイテムアニメーション用のタイマーをリセット
+      setTimeout(() => {
+        setNewTopItemsCount(0);
+        setNewBottomItemsCount(0);
+      }, 500);
+    }
+  };
 
   const handleTileClick = (tileIndex: number) => {
+    // アニメーション中は入力をブロック
+    const hasNewItems = newTopItemsCount > 0 || newBottomItemsCount > 0;
+    if (animationPhase !== 'idle' || hasNewItems) {
+      return;
+    }
+
     const newSelected = [...selectedTiles, tileIndex];
     const newTop = topBelt + problem.tiles[tileIndex].top;
     const newBottom = bottomBelt + problem.tiles[tileIndex].bottom;
@@ -75,8 +117,12 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           setTopAnimations(result.topAnimations);
           setBottomAnimations(result.bottomAnimations);
           setMergedElements(result.mergedElements);
+          
+          // タイムアウトを管理するための配列
+          const timeouts: number[] = [];
+
           // Phase 2: 合体表示から出荷フェーズへ (600ms後)
-          setTimeout(() => {
+          const timeout1 = setTimeout(() => {
             // フェードアウト + スライドフォワードフェーズ
             setAnimationPhase('shipping');
             // const shippingTopAnimations = result.topAnimations.map(anim => 
@@ -89,9 +135,10 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             // setTopAnimations(shippingTopAnimations);
             // setBottomAnimations(shippingBottomAnimations);
           }, 600);
+          timeouts.push(timeout1);
           
           // アニメーション完了、状態更新 (600ms後 + merged-item-fadeの時間)
-          setTimeout(() => {
+          const timeout2 = setTimeout(() => {
             setTopAnimations([]);
             setBottomAnimations([]);
             setMergedElements([]);
@@ -99,7 +146,13 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             setAnimationPhase('idle');
             setTopBelt(result.newTopBelt);
             setBottomBelt(result.newBottomBelt);
+            setPendingFinalState(null);
+            setAnimationTimeouts([]);
           }, 1200);
+          timeouts.push(timeout2);
+
+          // タイムアウトを状態に保存
+          setAnimationTimeouts(timeouts);
         } else {
           // ペアがない場合、クリア判定
           if (isCleared(topBelt, bottomBelt)) {
@@ -122,11 +175,16 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   }, [topBelt, bottomBelt, newTopItemsCount, newBottomItemsCount, animationPhase, onClear, onNavigate]);
 
   const handleClearAll = () => {
+    // アニメーション中でもリセットは許可
+    if (animationPhase !== 'idle') {
+      cancelAnimationsAndApplyFinalState();
+    }
     setSelectedTiles([]);
     setTopBelt(problem.initialState.topBelt);
     setBottomBelt(problem.initialState.bottomBelt);
     setNewTopItemsCount(0);
     setNewBottomItemsCount(0);
+    setPendingFinalState(null);
   };
 
   const handleImpossible = () => {
