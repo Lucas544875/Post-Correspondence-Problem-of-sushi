@@ -104,22 +104,7 @@ export const sampleProblems: Problem[] = [
     ]
   },
   {
-    id: '8',
-    difficulty: 'np-hard',
-    solvable: true,
-    solution: [2,0,0,0,1,2,2,2,0,2,0,2,1,1,1,2,2,0,2,1,1,2,1],
-    initialState: {
-      topBelt: 'STTT',
-      bottomBelt: ''
-    },
-    tiles: [
-      { id: 'tile-1', top: 'S', bottom: 'S' },
-      { id: 'tile-2', top: 'S', bottom: 'STT' },
-      { id: 'tile-3', top: 'TS', bottom: 'T' },
-    ]
-  },
-  {
-    id: "9",
+    id: "8",
     difficulty: 'np-hard',
     solvable: true,
     solution: [2,2,2,2,0,2,0,2,0,2,1,1,1,1,2,2,2,0,2,0,2,1,1,1,2,2,0,2,1,1,2,1],
@@ -134,7 +119,7 @@ export const sampleProblems: Problem[] = [
     ]
   },
   {
-    id: "10",
+    id: "9",
     difficulty: 'np-hard',
     solvable: true,
     solution: [],
@@ -149,7 +134,7 @@ export const sampleProblems: Problem[] = [
     ]
   },
   {
-    id: "11",
+    id: "10",
     difficulty: 'np-hard',
     solvable: true,
     solution: [],
@@ -161,6 +146,21 @@ export const sampleProblems: Problem[] = [
       { id: 'tile-1', top: 'TTST', bottom: 'S' },
       { id: 'tile-2', top: 'STTS', bottom: 'SS' },
       { id: 'tile-3', top: 'T', bottom: 'SST' },
+    ]
+  },
+    {
+    id: '11',
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [],
+    initialState: {
+      topBelt: '',
+      bottomBelt: 'TS'
+    },
+    tiles: [
+      { id: 'tile-1', top: 'TTST', bottom: 'TST' },
+      { id: 'tile-2', top: 'ST', bottom: 'S' },
+      { id: 'tile-3', top: 'T', bottom: 'STS' },
     ]
   },
   {
