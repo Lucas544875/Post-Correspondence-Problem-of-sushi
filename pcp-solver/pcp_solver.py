@@ -180,3 +180,88 @@ class OptimizedPCPSolver:
         
         indices.sort(key=priority)
         return indices
+
+def main():
+    """メイン実行関数 - 対話的にPCP問題を解く"""
+    print("PCP問題ソルバー")
+    print("=" * 30)
+    
+    while True:
+        print("\n=== PCP問題入力 ===")
+        
+        # ドミノ数の入力
+        try:
+            num_dominoes = int(input("ドミノ数を入力してください: "))
+            if num_dominoes <= 0:
+                print("ドミノ数は1以上である必要があります。")
+                continue
+        except ValueError:
+            print("有効な数値を入力してください。")
+            continue
+        
+        # ドミノの入力
+        dominoes = []
+        print(f"\n{num_dominoes}個のドミノを入力してください:")
+        for i in range(num_dominoes):
+            print(f"ドミノ {i+1}:")
+            top = input("  上部文字列: ").strip()
+            bottom = input("  下部文字列: ").strip()
+            dominoes.append((top, bottom))
+        
+        # 初期文字列の入力
+        print("\n初期文字列を入力してください:")
+        initial_top = input("上部初期文字列: ").strip()
+        initial_bottom = input("下部初期文字列: ").strip()
+        
+        # 設定
+        max_depth = int(input("\n最大探索深度 (デフォルト: 20): ") or "20")
+        time_limit = float(input("制限時間（秒） (デフォルト: 5.0): ") or "5.0")
+        
+        try:
+            # 問題インスタンス作成
+            instance = PCPInstance(dominoes, initial_top, initial_bottom)
+            print(f"\n{instance}")
+            
+            # ソルバー選択
+            print("\nソルバーを選択してください:")
+            print("1. シンプルソルバー")
+            print("2. 最適化ソルバー")
+            solver_choice = input("選択 (デフォルト: 2): ") or "2"
+            
+            if solver_choice == "1":
+                solver = SimplePCPSolver(instance, max_depth)
+            else:
+                solver = OptimizedPCPSolver(instance, max_depth, time_limit)
+            
+            # 解探索実行
+            print("\n=== 解探索中... ===")
+            solution = solver.solve()
+            
+            # 結果表示
+            if solution:
+                print("\n=== 解が見つかりました！ ===")
+                print(solution)
+                print(f"\n使用ドミノの詳細:")
+                for i, domino_idx in enumerate(solution.sequence):
+                    top, bottom = instance.dominoes[domino_idx]
+                    print(f"  {i+1}. ドミノ{domino_idx}: '{top}' / '{bottom}'")
+            else:
+                print("\n=== 解が見つかりませんでした ===")
+                print("制限時間内または最大深度内で解は存在しないようです。")
+                print("パラメータを調整してみてください。")
+            
+        except ValueError as e:
+            print(f"エラー: {e}")
+        except Exception as e:
+            print(f"予期しないエラーが発生しました: {e}")
+        
+        # 継続確認
+        if input("\n別の問題を解きますか？ (y/n): ").strip().lower() != 'y':
+            break
+    
+    print("ソルバーを終了します。")
+
+
+if __name__ == "__main__":
+    main()
+    
