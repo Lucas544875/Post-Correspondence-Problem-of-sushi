@@ -149,7 +149,10 @@ class PCPSolution:
         """解の多様性スコア（異なるドミノ数/総ドミノ使用数）"""
         if not self.sequence:
             return 0.0
-        return len(set(self.sequence)) / len(self.sequence)
+        if len(set(self.sequence)) != len(self.sequence):
+            return 0.0
+        domino_length_sum = sum(len(top) + len(bottom) for top, bottom in self.instance.dominoes)
+        return min(1.0, domino_length_sum / 8)
     
     def to_dict(self) -> Dict:
         """辞書形式に変換"""
