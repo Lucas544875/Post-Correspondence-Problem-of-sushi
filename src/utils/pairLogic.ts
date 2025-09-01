@@ -134,17 +134,22 @@ export const removeAllPairs = (topBelt: string, bottomBelt: string): PairRemoval
   }
   
   // 残った要素に左詰めアニメーションを設定
-  const slideDistance = consumedTop * 56; // 消去された要素数 × 56px
+  const topDistanceCoefficient = Math.min(1, 10/originalTopLength);
+  const bottomDistanceCoefficient = Math.min(1, 10/originalBottomLength);
+  const topBaseDistance = 56 * topDistanceCoefficient;
+  const bottomBaseDistance = 56 * bottomDistanceCoefficient;
+  const topSlideDistance = consumedTop * topBaseDistance;
+  const bottomSlideDistance = consumedBottom * bottomBaseDistance;
   
   for (let i = consumedTop; i < originalTopLength; i++) {
     if (consumedTop > 0) {
-      topAnimations[i] = { state: 'slide-forward', slideDistance };
+      topAnimations[i] = { state: 'slide-forward', slideDistance: topSlideDistance };
     }
   }
   
   for (let i = consumedBottom; i < originalBottomLength; i++) {
     if (consumedBottom > 0) {
-      bottomAnimations[i] = { state: 'slide-forward', slideDistance };
+      bottomAnimations[i] = { state: 'slide-forward', slideDistance: bottomSlideDistance };
     }
   }
   
