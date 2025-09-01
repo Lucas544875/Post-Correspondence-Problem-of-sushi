@@ -51,11 +51,11 @@ export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem 
 
         <div className="mt-8 text-center text-gray-600">
           <p>問題を選択してください</p>
-          <p className="text-sm">
+          {/* <p className="text-sm">
             {gameMode === 'np-hard' 
               ? '※ すべての問題に解答が存在します' 
               : '※ 解けない問題も含まれています'}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
