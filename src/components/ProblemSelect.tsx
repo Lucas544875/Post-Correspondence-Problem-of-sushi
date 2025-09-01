@@ -10,7 +10,7 @@ interface ProblemSelectProps {
 export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem }: ProblemSelectProps) => {
   const filteredProblems = problems.filter(p => p.difficulty === gameMode);
   
-  const modeTitle = gameMode === 'np-hard' ? 'NP-ハードモード' : '決定不能モード';
+  const modeTitle = "問題選択"//gameMode === 'np-hard' ? 'NP-ハードモード' : '決定不能モード';
   const modeColor = gameMode === 'np-hard' ? 'green' : 'red';
 
   return (
@@ -50,7 +50,7 @@ export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem 
         </div>
 
         <div className="mt-8 text-center text-gray-600">
-          <p>問題を選択してください</p>
+          {/* <p>問題を選択してください</p> */}
           {/* <p className="text-sm">
             {gameMode === 'np-hard' 
               ? '※ すべての問題に解答が存在します' 
