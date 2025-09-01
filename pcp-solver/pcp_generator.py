@@ -107,10 +107,7 @@ class ConstrainedPCPGenerator:
             # 文字を一種類しか含まない場合はスキップ
             if len(set(''.join(domino[0] + domino[1] for domino in domino_list))) == 1:
                 continue
-            # 先頭文字が一致していれる場合はスキップ
-            if any(domino[0][0] == domino[1][0] for domino in domino_list):
-                continue
-                        
+
             yield domino_list
     
     def _generate_initial_pairs(self, chars: List[str], max_len: int) -> Iterator[str]:
