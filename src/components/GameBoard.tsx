@@ -296,14 +296,14 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         </div>
 
         {/* タイルボタン */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto m-12">
+        <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto m-12">
           {problem.tiles.map((tile, index) => {
             const isDisabled = topBelt.length > 0 && bottomBelt.length > 0;
             return (
             <button
               key={tile.id}
               onClick={() => handleTileClick(index)}
-              className={`tile-button relative border-4 rounded-lg p-4 pb-3 shadow-lg ${
+              className={`tile-button relative border-4 rounded-lg p-4 pb-3 shadow-lg w-48 ${
                 isDisabled
                   ? 'bg-gray-200 border-gray-300 opacity-60 cursor-not-allowed'
                   : 'bg-gradient-to-b from-gray-100 to-gray-200 border-gray-400 hover:from-gray-200 hover:to-gray-300 hover:border-gray-500 active:from-gray-300 active:to-gray-400'
