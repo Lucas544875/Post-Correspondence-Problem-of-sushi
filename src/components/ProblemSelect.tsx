@@ -14,7 +14,7 @@ export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem 
   const modeColor = gameMode === 'np-hard' ? 'green' : 'red';
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-100 to-yellow-100 p-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200  p-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <button
