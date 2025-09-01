@@ -1,6 +1,7 @@
-import sashimiImg from '../assets/sashimi.png';
-import tampopoImg from '../assets/tampopo.png';
-import tampopoOnSashimiImg from '../assets/tampopo_on_sashimi.png';
+// 画像はpublicフォルダから参照
+const sashimiImg = '/sashimi.png';
+const tampopoImg = '/tampopo.png';
+const tampopoOnSashimiImg = '/tampopo_on_sashimi.png';
 
 interface GameIconProps {
   type: 'sashimi' | 'tampopo' | 'tampopo_on_sashimi';

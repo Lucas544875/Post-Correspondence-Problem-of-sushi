@@ -250,7 +250,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         {/* ベルトコンベア表示エリア */}
         <div className="mb-4 space-y-6 relative"> {/* 画面サイズ依存 */}
           <img 
-            src="/src/assets/conveyors.png" 
+            src="/conveyors.png" 
             alt="conveyor belt"
             className="w-full object-cover z-10 mb-0"
           />

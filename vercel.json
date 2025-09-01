@@ -1,12 +1,13 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
   "routes": [
     {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "src": "/(.*\\.(png|jpe?g|gif|svg|webp|ico|css|js))",
+      "headers": {
+        "cache-control": "max-age=31536000, immutable"
+      }
     },
     {
       "src": "/(.*)",
