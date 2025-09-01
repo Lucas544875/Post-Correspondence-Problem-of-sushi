@@ -15,16 +15,21 @@ from collections import deque
 import time
 
 class PCPSolver:
-    def __init__(self, dominoes: List[Tuple[str, str]], max_depth: int = 20):
+    def __init__(self, dominoes: List[Tuple[str, str]], max_depth: int = 20, 
+                 initial_top: str = "", initial_bottom: str = ""):
         """
         PCPソルバーを初期化
         
         Args:
             dominoes: ドミノのリスト [(上部文字列, 下部文字列), ...]
             max_depth: 最大探索深度
+            initial_top: 初期上部文字列
+            initial_bottom: 初期下部文字列
         """
         self.dominoes = dominoes
         self.max_depth = max_depth
+        self.initial_top = initial_top
+        self.initial_bottom = initial_bottom
         self.visited = set()  # 重複状態を避けるためのセット
         self.solution = None
         
@@ -36,18 +41,33 @@ class PCPSolver:
             解が存在する場合はドミノのインデックスリスト、存在しない場合はNone
         """
         print(f"ドミノ: {self.dominoes}")
+        print(f"初期上部: '{self.initial_top}', 初期下部: '{self.initial_bottom}'")
         print(f"最大探索深度: {self.max_depth}")
         print("探索開始...")
         
         start_time = time.time()
         
-        # 各ドミノから探索開始
-        for i, domino in enumerate(self.dominoes):
+        # 初期文字列が設定されている場合はそれから開始
+        if self.initial_top or self.initial_bottom:
+            # 初期文字列が既に一致している場合
+            if self.initial_top == self.initial_bottom and len(self.initial_top) > 0:
+                self.solution = []
+                print(f"初期文字列で既に解決済み")
+                return self.solution
+            
+            # 初期文字列から探索開始
             self.visited.clear()
-            result = self._dfs([i], domino[0], domino[1], 1)
+            result = self._dfs([], self.initial_top, self.initial_bottom, 0)
             if result:
                 self.solution = result
-                break
+        else:
+            # 通常のPCP: 各ドミノから探索開始
+            for i, domino in enumerate(self.dominoes):
+                self.visited.clear()
+                result = self._dfs([i], domino[0], domino[1], 1)
+                if result:
+                    self.solution = result
+                    break
                 
         end_time = time.time()
         
@@ -107,8 +127,14 @@ class PCPSolver:
     def _print_solution(self, solution: List[int]):
         """解の詳細を出力"""
         print("\n=== 解の詳細 ===")
-        top_string = ""
-        bottom_string = ""
+        top_string = self.initial_top
+        bottom_string = self.initial_bottom
+        
+        if self.initial_top or self.initial_bottom:
+            print(f"初期状態:")
+            print(f"  上部: {top_string}")
+            print(f"  下部: {bottom_string}")
+            print()
         
         for i, domino_idx in enumerate(solution):
             domino = self.dominoes[domino_idx]
@@ -125,37 +151,11 @@ class PCPSolver:
         print(f"下部: {bottom_string}")
         print(f"一致: {'OK' if top_string == bottom_string else 'NG'}")
 
-def create_sample_problems():
-    """サンプル問題を作成"""
-    problems = {
-        "簡単な問題": [
-            ("a", "aa"),
-            ("aa", "a")
-        ],
-        "中程度の問題": [
-            ("ab", "aba"),
-            ("baa", "aa"),
-            ("aba", "bab")
-        ],
-        "難しい問題": [
-            ("abc", "ab"),
-            ("ca", "a"),
-            ("acc", "ba")
-        ],
-        "寿司問題": [
-            ("s", "ss"),
-            ("ss", "s"),
-            ("b", "bb"),
-            ("bb", "b")
-        ]
-    }
-    return problems
-
 def main():
     """メイン関数"""
     print("=== ポスト対応問題ソルバー ===\n")
     
-    problems = create_sample_problems()
+    problems = {}
     
     while True:
         print("問題を選択してください:")
@@ -174,8 +174,6 @@ def main():
             elif 1 <= choice <= len(problem_names):
                 selected_problem = problems[problem_names[choice - 1]]
                 print(f"\n選択された問題: {problem_names[choice - 1]}")
-            elif choice == len(problem_names) + 1:
-                selected_problem = input_custom_problem()
             else:
                 print("無効な選択です。")
                 continue
@@ -194,31 +192,6 @@ def main():
         except KeyboardInterrupt:
             print("\n\n処理が中断されました。")
             break
-
-def input_custom_problem():
-    """カスタム問題の入力"""
-    print("\nカスタム問題を入力してください:")
-    print("形式: 上部文字列,下部文字列")
-    print("例: abc,ab")
-    print("終了するには空行を入力してください")
-    
-    dominoes = []
-    while True:
-        line = input(f"ドミノ {len(dominoes) + 1}: ").strip()
-        if not line:
-            break
-        
-        try:
-            top, bottom = line.split(',')
-            dominoes.append((top.strip(), bottom.strip()))
-        except ValueError:
-            print("形式が正しくありません。'上部,下部'の形式で入力してください。")
-    
-    if not dominoes:
-        print("ドミノが入力されませんでした。デフォルト問題を使用します。")
-        return [("a", "aa"), ("aa", "a")]
-    
-    return dominoes
 
 if __name__ == "__main__":
     main()
