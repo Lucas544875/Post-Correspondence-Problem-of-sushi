@@ -9,9 +9,9 @@ export const TitleScreen = ({ onNavigate }: TitleScreenProps) => {
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200  flex items-center justify-center">
       <div className="text-center space-y-8">
         <h1 className="text-6xl font-bold text-orange-800 mb-20 hachi-maru-pop-regular">
-          <img src="src/assets/sashimi.png" alt="刺身" className="inline-block w-12 h-12 mr-2" />
+          <img src="/sashimi.png" alt="刺身" className="inline-block w-12 h-12 mr-2" />
           刺身にタンポポ乗せるだけ
-          <img src="src/assets/tampopo.png" alt="タンポポ" className="inline-block w-12 h-12 ml-2" />
+          <img src="/tampopo.png" alt="タンポポ" className="inline-block w-12 h-12 ml-2" />
         </h1>
         
         <div className="space-y-4">
