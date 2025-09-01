@@ -17,7 +17,7 @@ export const renderGameString = (
   isShipping?: boolean, 
   size: 'small' | 'medium' | 'large' | 'relative' = 'medium', 
   newItemsCount?: number, 
-  hidePairHead?: boolean,
+  _hidePairHead?: boolean,
   elementAnimations?: ElementAnimation[]
 ): React.ReactNode[] => {
   const existingItemsCount = str.length - (newItemsCount || 0);
@@ -54,7 +54,7 @@ export const renderGameString = (
     } as React.CSSProperties;
     
     if (char === 'S' || char === 'T') {
-      const iconType = getIconType(char, animation);
+      const iconType = getIconType(char);
       return React.createElement(GameIcon, { 
         key: `${index}-${char}`, 
         type: iconType!, 
@@ -90,7 +90,7 @@ const getAnimationClass = (animation: ElementAnimation): string => {
 };
 
 // 文字を画像タイプに変換
-export const getIconType = (char: string,  animation?: ElementAnimation): 'sashimi' | 'tampopo' | 'tampopo_on_sashimi' | null => {
+export const getIconType = (char: string): 'sashimi' | 'tampopo' | 'tampopo_on_sashimi' | null => {
   // 合体アニメーション中は合体画像を表示
   // if (animation?.state === 'merged-appear' || animation?.state === 'merged-fade') {
   //   return 'tampopo_on_sashimi';
