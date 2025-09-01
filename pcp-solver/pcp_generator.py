@@ -35,16 +35,16 @@ class ConstrainedPCPGenerator:
         samples_tested = 0
         
         # ドミノ数2-3での探索
-        for num_dominoes in [2, 3]:
+        for num_dominoes in [3]:
             print(f"\nドミノ数 {num_dominoes} での探索...")
             
             # ドミノの組み合わせを生成
-            for dominoes in self._generate_domino_combinations(chars, num_dominoes, 4):
+            for dominoes in self._generate_domino_combinations(chars, num_dominoes, 3):
                 if samples_tested >= max_samples:
                     break
                 
                 # 初期文字列の組み合わせ
-                for initial_top in self._generate_initial_pairs(chars, 6):
+                for initial_top in self._generate_initial_pairs(chars, 4):
                     if samples_tested >= max_samples:
                         break
                     
@@ -85,7 +85,7 @@ class ConstrainedPCPGenerator:
                         # 無効な問題インスタンスはスキップ
                         continue
                     
-                    if samples_tested % 20 == 0:
+                    if (20 * samples_tested) % max_samples == 0:
                         print(f"進捗: {samples_tested}/{max_samples}")
         
         print(f"\n探索完了: {len(found_problems)} 問題発見")
@@ -93,7 +93,7 @@ class ConstrainedPCPGenerator:
     
     def _generate_domino_combinations(self, chars: List[str], num_dominoes: int, max_len: int) -> Iterator[List[Tuple[str, str]]]:
         """ドミノの組み合わせ生成"""
-        # 可能な文字列（空文字列含む）
+        # 可能な文字列
         strings = []
         for length in range(1, max_len + 1):
             for combo in itertools.product(chars, repeat=length):
@@ -107,7 +107,10 @@ class ConstrainedPCPGenerator:
             # 文字を一種類しか含まない場合はスキップ
             if len(set(''.join(domino[0] + domino[1] for domino in domino_list))) == 1:
                 continue
-            
+            # 先頭文字が一致していれる場合はスキップ
+            if any(domino[0][0] == domino[1][0] for domino in domino_list):
+                continue
+                        
             yield domino_list
     
     def _generate_initial_pairs(self, chars: List[str], max_len: int) -> Iterator[str]:
@@ -118,18 +121,7 @@ class ConstrainedPCPGenerator:
         
     
     def _evaluate_quality(self, solution: PCPSolution) -> float:
-        """問題の品質を評価（0-1スコア）"""
-        score = 0.0
-        
-        # 解の長さ評価 (長い方がよい)
-        length_score = min(1.0, solution.length / 10)
-        score += length_score * 0.5
-        
-        # ドミノの多様性
-        if solution.sequence:
-            score += solution.diversity_score * 0.5
-        
-        return min(1.0, score)
+        return len(solution.final_string)
     
     def _classify_difficulty(self, solution: PCPSolution) -> str:
         """難易度分類"""
@@ -140,12 +132,12 @@ class ConstrainedPCPGenerator:
         else:
             return "hard"
     
-    def generate_game_problem_set(self, target_count: int = 15) -> Dict:
+    def generate_game_problem_set(self, max_samples: int = 100) -> Dict:
         """ゲーム用問題セットを生成"""
-        print(f"=== ゲーム用問題セット生成 (目標: {target_count}問題) ===")
+        print(f"=== ゲーム用問題セット生成 ===")
         
         # 大規模探索
-        all_problems = self.search_sushi_problems(max_samples=10000, sreshold=3)
+        all_problems = self.search_sushi_problems(max_samples, sreshold=3)
         
         if not all_problems:
             print("問題が見つかりませんでした。")
@@ -154,17 +146,15 @@ class ConstrainedPCPGenerator:
         # 品質順にソート
         all_problems.sort(key=lambda p: p['quality_score'], reverse=True)
         
-        selected_problems = all_problems[:target_count]
-        
         problem_set = {
             'name': 'sushi_constrained_pcp_problems',
             'description': '制約付き探索で生成された寿司テーマPCP問題セット',
             'generated_at': time.strftime('%Y-%m-%d %H:%M:%S'),
-            'problems': selected_problems,
+            'problems': all_problems,
             'statistics': {
                 'total_found': len(all_problems),
-                'selected_total': len(selected_problems),
-                'avg_quality': sum(p['quality_score'] for p in selected_problems) / len(selected_problems) if selected_problems else 0
+                'selected_total': len(all_problems),
+                'avg_quality': sum(p['quality_score'] for p in all_problems) / len(all_problems) if all_problems else 0
             }
         }
         

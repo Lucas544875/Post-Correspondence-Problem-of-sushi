@@ -19,8 +19,7 @@ def main():
     generator = ConstrainedPCPGenerator(max_depth=100, time_limit=2.0)
 
     # ゲーム用問題セット生成
-    target_count = int(input("生成する問題数 (デフォルト: 20): ") or "20")
-    problem_set = generator.generate_game_problem_set(target_count)
+    problem_set = generator.generate_game_problem_set(10000)
     
     print(f"\n=== 生成結果 ===")
     stats = problem_set['statistics']
