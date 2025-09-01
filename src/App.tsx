@@ -5,6 +5,7 @@ import { TitleScreen } from './components/TitleScreen'
 import { ProblemSelect } from './components/ProblemSelect'
 import { GameBoard } from './components/GameBoard'
 import { ClearScreen } from './components/ClearScreen'
+import { markProblemCleared } from './utils/storage'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>('title')
@@ -37,6 +38,11 @@ function App() {
 
   const handleClear = () => {
     setGameState(prev => ({ ...prev, isCompleted: true }))
+    
+    // クリア状態を保存
+    if (gameState.currentProblem) {
+      markProblemCleared(gameState.currentProblem.id, gameState.gameMode)
+    }
   }
 
   const handleNextProblem = () => {

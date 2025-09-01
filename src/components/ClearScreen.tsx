@@ -8,14 +8,14 @@ interface ClearScreenProps {
 
 export const ClearScreen = ({ onNavigate, onNextProblem, hasNextProblem }: ClearScreenProps) => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-100 to-yellow-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
       <div className="text-center space-y-8">
         <div className="text-8xl mb-4">🎉</div>
         <h1 className="text-6xl font-bold text-green-800 mb-4">
           クリア！
         </h1>
         <p className="text-2xl text-gray-700 mb-8">
-          見事に2つのベルトが合流しました！
+          すべての刺身パックを出荷しました！
         </p>
         
         <div className="space-y-4">

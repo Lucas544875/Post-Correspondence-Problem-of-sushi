@@ -8,5 +8,18 @@
     ],
     "deny": [],
     "ask": []
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"New-BurntToastNotification -Text 'Claude Code', '完了しました'\""
+          }
+        ]
+      }
+    ]
   }
 }
