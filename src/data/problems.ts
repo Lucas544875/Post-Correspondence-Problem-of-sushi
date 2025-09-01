@@ -62,14 +62,120 @@ export const sampleProblems: Problem[] = [
     id: '5',
     difficulty: 'np-hard',
     solvable: true,
-    solution: [0,1,0,0,1,0],
+    solution: [0,1,2],
     initialState: {
-      topBelt: 'TSST',
+      topBelt: 'TT',
       bottomBelt: ''
     },
     tiles: [
-      { id: 'tile-1', top: 'S', bottom: 'ST' },
-      { id: 'tile-2', top: 'TST', bottom: 'TST' },
+      { id: 'tile-1', top: 'S', bottom: 'S' },
+      { id: 'tile-2', top: 'S', bottom: 'ST' },
+      { id: 'tile-3', top: 'T', bottom: 'TS' },
+    ]
+  },
+  {
+    id: '6',
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [0,2,2,0,1],
+    initialState: {
+      topBelt: 'TSTT',
+      bottomBelt: ''
+    },
+    tiles: [
+      { id: 'tile-1', top: 'S', bottom: 'S' },
+      { id: 'tile-2', top: 'S', bottom: 'STT' },
+      { id: 'tile-3', top: 'TT', bottom: 'TSS' },
+    ]
+  },
+  {
+    id: '7',
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [0,0,0,1,2,2,2,0,0,1,2,2,0,1,2,1],
+    initialState: {
+      topBelt: 'TTTT',
+      bottomBelt: ''
+    },
+    tiles: [
+      { id: 'tile-1', top: 'S', bottom: 'S' },
+      { id: 'tile-2', top: 'T', bottom: 'T' },
+      { id: 'tile-3', top: 'S', bottom: 'ST' },
+    ]
+  },
+  {
+    id: '8',
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [2,0,0,0,1,2,2,2,0,2,0,2,1,1,1,2,2,0,2,1,1,2,1],
+    initialState: {
+      topBelt: 'STTT',
+      bottomBelt: ''
+    },
+    tiles: [
+      { id: 'tile-1', top: 'S', bottom: 'S' },
+      { id: 'tile-2', top: 'S', bottom: 'STT' },
+      { id: 'tile-3', top: 'TS', bottom: 'T' },
+    ]
+  },
+  {
+    id: "9",
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [2,2,2,2,0,2,0,2,0,2,1,1,1,1,2,2,2,0,2,0,2,1,1,1,2,2,0,2,1,1,2,1],
+    initialState: {
+      topBelt: 'SSSS',
+      bottomBelt: ''
+    },
+    tiles: [
+      { id: 'tile-1', top: 'S', bottom: 'S' },
+      { id: 'tile-2', top: 'S', bottom: 'STT' },
+      { id: 'tile-3', top: 'TS', bottom: 'T' },
+    ]
+  },
+  {
+    id: "10",
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [],
+    initialState: {
+      topBelt: 'TT',
+      bottomBelt: ''
+    },
+    tiles: [
+      { id: 'tile-1', top: 'STT', bottom: 'T' },
+      { id: 'tile-2', top: 'T', bottom: 'TSS' },
+      { id: 'tile-3', top: 'S', bottom: 'S' },
+    ]
+  },
+  {
+    id: "11",
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [],
+    initialState: {
+      topBelt: '',
+      bottomBelt: 'ST'
+    },
+    tiles: [
+      { id: 'tile-1', top: 'TTST', bottom: 'S' },
+      { id: 'tile-2', top: 'STTS', bottom: 'SS' },
+      { id: 'tile-3', top: 'T', bottom: 'SST' },
+    ]
+  },
+  {
+    id: "12",
+    difficulty: 'np-hard',
+    solvable: true,
+    solution: [],
+    initialState: {
+      topBelt: '',
+      bottomBelt: 'ST'
+    },
+    tiles: [
+      { id: 'tile-1', top: 'STTS', bottom: 'T' },
+      { id: 'tile-2', top: 'T', bottom: 'SST' },
+      { id: 'tile-3', top: 'TS', bottom: 'S' },
     ]
   },
   {
