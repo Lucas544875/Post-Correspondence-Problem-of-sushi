@@ -75,6 +75,11 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
       return;
     }
 
+    // 上下のレーンがいずれも空でないときタイルを無効化
+    if (topBelt.length > 0 && bottomBelt.length > 0) {
+      return;
+    }
+
     const newTop = topBelt + problem.tiles[tileIndex].top;
     const newBottom = bottomBelt + problem.tiles[tileIndex].bottom;
     
@@ -216,7 +221,7 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
             onClick={() => onNavigate('problem-select')}
             className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
           >
-            ← 戻る
+            ← 問題選択
           </button>
           <h1 className="text-3xl font-bold text-gray-800">
             問題 {problem.id}
@@ -292,22 +297,36 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
 
         {/* タイルボタン */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto m-12">
-          {problem.tiles.map((tile, index) => (
+          {problem.tiles.map((tile, index) => {
+            const isDisabled = topBelt.length > 0 && bottomBelt.length > 0;
+            return (
             <button
               key={tile.id}
               onClick={() => handleTileClick(index)}
-              className="tile-button bg-white hover:bg-gray-50 border-4 border-orange-300 hover:border-orange-500 rounded-lg p-4"
+              className={`tile-button relative border-4 rounded-lg p-4 pb-3 shadow-lg ${
+                isDisabled
+                  ? 'bg-gray-200 border-gray-300 opacity-60 cursor-not-allowed'
+                  : 'bg-gradient-to-b from-gray-100 to-gray-200 border-gray-400 hover:from-gray-200 hover:to-gray-300 hover:border-gray-500 active:from-gray-300 active:to-gray-400'
+              }`}
             >
-              <div className="text-center">
-                <div className="text-lg font-bold text-yellow-600 mb-2 flex items-center justify-center">
-                  上: <div className="ml-2 flex">{renderGameString(tile.top)}</div>
+              {/* 工場パネル風の装飾 */}
+              <div className="absolute top-1 left-1 w-2 h-2 bg-red-400 rounded-full shadow-inner"></div>
+              <div className="absolute top-1 right-1 w-2 h-2 bg-green-400 rounded-full shadow-inner"></div>
+              <div className="absolute top-1 left-1/2 transform -translate-x-1/2 text-xs font-mono text-gray-600">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              
+              <div className="text-center mt-3">
+                <div className="flex items-center justify-center border-b-2 border-gray-400 border-dashed pb-2 rounded-t">
+                  <div className="ml-2 flex min-h-8">{renderGameString(tile.top)}</div>
                 </div>
-                <div className="text-lg font-bold text-red-600 flex items-center justify-center">
-                  下: <div className="ml-2 flex">{renderGameString(tile.bottom)}</div>
+                <div className="flex items-center justify-center pt-2  rounded-b px-2">
+                  <div className="ml-2 flex min-h-8">{renderGameString(tile.bottom)}</div>
                 </div>
               </div>
             </button>
-          ))}
+            );
+          })}
         </div>
 
         {/* 決定不能モード用の不可能ボタン */}
