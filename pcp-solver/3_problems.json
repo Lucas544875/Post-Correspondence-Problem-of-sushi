@@ -1,0 +1,6043 @@
+{
+  "name": "sushi_constrained_pcp_problems",
+  "description": "制約付き探索で生成された寿司テーマPCP問題セット",
+  "generated_at": "2025-09-01 20:23:33",
+  "problems": [
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 32,
+      "solve_time": 0.0,
+      "quality_score": 52,
+      "difficulty": "hard",
+      "final_string": "SSSSTSTSTSTSSTSSTSSTSSSSSTSTSTSSTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 23,
+      "solve_time": 0.0,
+      "quality_score": 37,
+      "difficulty": "hard",
+      "final_string": "STTTTSSSSSTSTSTSSTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 21,
+      "solve_time": 0.0,
+      "quality_score": 35,
+      "difficulty": "hard",
+      "final_string": "SSSTTSTSTSSSTSSTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 18,
+      "solve_time": 0.0,
+      "quality_score": 30,
+      "difficulty": "hard",
+      "final_string": "SSSTSTSTSSTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 18,
+      "solve_time": 0.0,
+      "quality_score": 30,
+      "difficulty": "hard",
+      "final_string": "SSTTTSTSSSSTSSTSTSSSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 17,
+      "solve_time": 0.0,
+      "quality_score": 29,
+      "difficulty": "hard",
+      "final_string": "SSTSTSTSSTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 20,
+      "solve_time": 0.0,
+      "quality_score": 24,
+      "difficulty": "hard",
+      "final_string": "SSSSTTTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 14,
+      "solve_time": 0.0,
+      "quality_score": 24,
+      "difficulty": "hard",
+      "final_string": "STSTTSSTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 19,
+      "solve_time": 0.0,
+      "quality_score": 23,
+      "difficulty": "hard",
+      "final_string": "SSSTTTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 18,
+      "solve_time": 0.0,
+      "quality_score": 22,
+      "difficulty": "hard",
+      "final_string": "SSTTTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 17,
+      "solve_time": 0.0010025501251220703,
+      "quality_score": 21,
+      "difficulty": "hard",
+      "final_string": "STTTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 16,
+      "solve_time": 0.0,
+      "quality_score": 20,
+      "difficulty": "hard",
+      "final_string": "TTTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 12,
+      "solve_time": 0.0,
+      "quality_score": 20,
+      "difficulty": "hard",
+      "final_string": "STTTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 12,
+      "solve_time": 0.0,
+      "quality_score": 20,
+      "difficulty": "hard",
+      "final_string": "TTTTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 15,
+      "solve_time": 0.0,
+      "quality_score": 19,
+      "difficulty": "hard",
+      "final_string": "TTTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 19,
+      "difficulty": "hard",
+      "final_string": "SSTTSTSSSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 19,
+      "difficulty": "hard",
+      "final_string": "TSTTSTSSSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 19,
+      "difficulty": "hard",
+      "final_string": "TTTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 14,
+      "solve_time": 0.0,
+      "quality_score": 18,
+      "difficulty": "hard",
+      "final_string": "TTSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "STTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 18,
+      "difficulty": "medium",
+      "final_string": "STTSTSSSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 18,
+      "difficulty": "medium",
+      "final_string": "TTSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 13,
+      "solve_time": 0.0,
+      "quality_score": 17,
+      "difficulty": "hard",
+      "final_string": "TSSSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TSSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 17,
+      "difficulty": "medium",
+      "final_string": "TSSSSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 12,
+      "solve_time": 0.0,
+      "quality_score": 16,
+      "difficulty": "hard",
+      "final_string": "SSSSTTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 16,
+      "difficulty": "medium",
+      "final_string": "SSSSTTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 12,
+      "solve_time": 0.0,
+      "quality_score": 15,
+      "difficulty": "hard",
+      "final_string": "SSSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 15,
+      "difficulty": "hard",
+      "final_string": "SSTSTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 15,
+      "difficulty": "hard",
+      "final_string": "SSSTTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 15,
+      "difficulty": "medium",
+      "final_string": "TTSTSSTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 11,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "hard",
+      "final_string": "SSTTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "STSTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "STTSTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "TTTTSSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "SSTTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "SS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "SSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "TSTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "TSTSSTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 14,
+      "difficulty": "medium",
+      "final_string": "SSTTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 10,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "STTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TSTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TTSTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TTTSSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TTSTSSTSTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TSTTSTTTTSSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SSTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "SSTSTTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "STTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "STS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "STSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "TTSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "STSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "STSSTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SSS"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0005404949188232422,
+      "quality_score": 13,
+      "difficulty": "medium",
+      "final_string": "SSSTTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 9,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TTTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TSTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TTSSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "easy",
+      "final_string": "TSTSSTSTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "SSTTTTSSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "STTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "easy",
+      "final_string": "STTSTTTTSSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TT"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "easy",
+      "final_string": "TSTTSTTTTSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "STSTTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TSTSSTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "SSTTTSSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 12,
+      "difficulty": "medium",
+      "final_string": "TTTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 8,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TTSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TSSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TSSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TTT",
+          "STT"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "STTTTSSTTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TSTTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "ST",
+          "TS"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "TSTTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TTTTSSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SSS"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "SSSTTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "TTSTSSTSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "STTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "medium",
+      "final_string": "TTTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "STTTTTSSSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 11,
+      "difficulty": "easy",
+      "final_string": "TSTTSTTTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 7,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "SSSSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "SSTTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TSST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TSSTSTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TTTTSSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "SSTTTSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "TSTTSSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "TTSTSSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "STTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "STTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "TTTSSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.001506805419921875,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "STSTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "TSTSSTSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "TTSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "medium",
+      "final_string": "TTTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "STTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 10,
+      "difficulty": "easy",
+      "final_string": "STTSTTTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSTS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "SSTSTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TSTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "STSTTTSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TSTTSTSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TSTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTSSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "ST"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "STTTSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "STTTTSSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TT"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSTSTTST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "STTTTSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTTSSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "ST",
+          "TS"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "ST",
+          "TT"
+        ]
+      ],
+      "initial_top": "TTTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0006299018859863281,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "STTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "TSSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TSSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 9,
+      "difficulty": "easy",
+      "final_string": "TTSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 6,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "medium",
+      "final_string": "SSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "SSTTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TSTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0015189647674560547,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSTTSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSTSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSTSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0009992122650146484,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TST",
+          "STS"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSTSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TTT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSTTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TSTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SSSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "SSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "STSTTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "ST",
+          "T"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTSSSTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "TSS",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSSSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STS"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TSTSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 8,
+      "difficulty": "easy",
+      "final_string": "TTTSSSTT",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 5,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TSTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STTTSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTTSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "ST"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSTTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTTSSST",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "SSST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "SSSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "SSTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "SSTTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "STS"
+        ]
+      ],
+      "initial_top": "STST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "STT"
+        ]
+      ],
+      "initial_top": "STTT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STTTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TSSSTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TSTSTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSSTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SSS"
+        ]
+      ],
+      "initial_top": "SSS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "SSSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "SSTTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STS"
+        ]
+      ],
+      "initial_top": "STS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "STTTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 7,
+      "difficulty": "easy",
+      "final_string": "TTSSSTT",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSTS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SSS"
+        ]
+      ],
+      "initial_top": "TSS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TSSSTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TST",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TSTSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "ST",
+          "TSS"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TS",
+          "STS"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "SST"
+        ]
+      ],
+      "initial_top": "TS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TSSTTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "TT",
+          "STT"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSTT",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TT"
+        ],
+        [
+          "T",
+          "SST"
+        ]
+      ],
+      "initial_top": "TTT",
+      "initial_bottom": "",
+      "solution": [
+        1,
+        0,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTTSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "SS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "SSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "SST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "SSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "STT",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "STTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "TTS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TTSSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "T",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "solution_length": 4,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "TSTTSS",
+      "diversity_score": 0.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "SS"
+        ]
+      ],
+      "initial_top": "SS",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "SSTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "ST"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 6,
+      "difficulty": "easy",
+      "final_string": "STTTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "SS"
+        ]
+      ],
+      "initial_top": "TS",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 5,
+      "difficulty": "easy",
+      "final_string": "TSSTS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TS"
+        ],
+        [
+          "T",
+          "ST"
+        ]
+      ],
+      "initial_top": "TT",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        1,
+        2
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 5,
+      "difficulty": "easy",
+      "final_string": "TTSST",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "T",
+          "S"
+        ]
+      ],
+      "initial_top": "ST",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 5,
+      "difficulty": "easy",
+      "final_string": "STTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TS",
+          "S"
+        ]
+      ],
+      "initial_top": "T",
+      "initial_bottom": "",
+      "solution": [
+        0,
+        2,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 5,
+      "difficulty": "easy",
+      "final_string": "TSTSS",
+      "diversity_score": 1.0
+    },
+    {
+      "dominoes": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "S",
+          "TSS"
+        ],
+        [
+          "TT",
+          "S"
+        ]
+      ],
+      "initial_top": "S",
+      "initial_bottom": "",
+      "solution": [
+        2,
+        0,
+        1
+      ],
+      "solution_length": 3,
+      "solve_time": 0.0,
+      "quality_score": 5,
+      "difficulty": "easy",
+      "final_string": "STTSS",
+      "diversity_score": 1.0
+    }
+  ],
+  "statistics": {
+    "total_found": 185,
+    "selected_total": 185,
+    "avg_quality": 11.243243243243244
+  }
+}
