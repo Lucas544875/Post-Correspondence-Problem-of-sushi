@@ -36,13 +36,20 @@ function App() {
     }))
   }
 
-  const handleClear = () => {
-    setGameState(prev => ({ ...prev, isCompleted: true }))
-    
-    // クリア状態を保存
-    if (gameState.currentProblem) {
-      markProblemCleared(gameState.currentProblem.id, gameState.gameMode)
+  const handleClear = (selectedTiles: number[]): boolean => {
+    if (!gameState.currentProblem) return false
+
+    const wasSaved = markProblemCleared(
+      gameState.currentProblem.id,
+      gameState.gameMode,
+      selectedTiles
+    )
+
+    if (wasSaved) {
+      setGameState(prev => ({ ...prev, isCompleted: true }))
     }
+
+    return wasSaved
   }
 
   const handleNextProblem = () => {

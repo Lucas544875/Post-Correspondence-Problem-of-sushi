@@ -7,19 +7,21 @@ import { GameIcon } from './GameIcon';
 interface GameBoardProps {
   problem: Problem;
   onNavigate: (screen: Screen) => void;
-  onClear: () => void;
+  onClear: (selectedTiles: number[]) => boolean;
 }
 
 // ベルトの状態履歴を管理するインターフェース
 interface BeltState {
   topBelt: string;
   bottomBelt: string;
+  selectedTiles: number[];
 }
 
 export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
   const [beltHistory, setBeltHistory] = useState<BeltState[]>([{
     topBelt: problem.initialState.topBelt,
-    bottomBelt: problem.initialState.bottomBelt
+    bottomBelt: problem.initialState.bottomBelt,
+    selectedTiles: []
   }]);
   const [currentHistoryIndex, setCurrentHistoryIndex] = useState(0);
   const [topBelt, setTopBelt] = useState(problem.initialState.topBelt);
@@ -85,7 +87,15 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     
     // 新しい状態を履歴に追加
     const _newState = removeAllPairs(newTop, newBottom);
-    const newState = { topBelt: _newState.newTopBelt, bottomBelt: _newState.newBottomBelt};
+    const selectedTiles = [
+      ...beltHistory[currentHistoryIndex].selectedTiles,
+      tileIndex
+    ];
+    const newState = {
+      topBelt: _newState.newTopBelt,
+      bottomBelt: _newState.newBottomBelt,
+      selectedTiles
+    };
     const newHistory = beltHistory.slice(0, currentHistoryIndex + 1);
     newHistory.push(newState);
     setBeltHistory(newHistory);
@@ -172,8 +182,10 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
           // ペアがない場合、クリア判定
           if (isCleared(topBelt, bottomBelt)) {
             setTimeout(() => {
-              onClear();
-              onNavigate('clear');
+              const selectedTiles = beltHistory[currentHistoryIndex].selectedTiles;
+              if (onClear(selectedTiles)) {
+                onNavigate('clear');
+              }
             }, 500);
           }
         }
@@ -181,13 +193,15 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
         // どちらかが空の場合もクリア判定
         if (isCleared(topBelt, bottomBelt)) {
           setTimeout(() => {
-            onClear();
-            onNavigate('clear');
+            const selectedTiles = beltHistory[currentHistoryIndex].selectedTiles;
+            if (onClear(selectedTiles)) {
+              onNavigate('clear');
+            }
           }, 500);
         }
       }
     }, animationDelay);
-  }, [topBelt, bottomBelt, newTopItemsCount, newBottomItemsCount, animationPhase, onClear, onNavigate]);
+  }, [topBelt, bottomBelt, newTopItemsCount, newBottomItemsCount, animationPhase, beltHistory, currentHistoryIndex, onClear, onNavigate]);
 
   const handleClearAll = () => {
     // アニメーション中でもリセットは許可
@@ -197,7 +211,8 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
     // 履歴を初期状態にリセット
     setBeltHistory([{
       topBelt: problem.initialState.topBelt,
-      bottomBelt: problem.initialState.bottomBelt
+      bottomBelt: problem.initialState.bottomBelt,
+      selectedTiles: []
     }]);
     setCurrentHistoryIndex(0);
     setTopBelt(problem.initialState.topBelt);

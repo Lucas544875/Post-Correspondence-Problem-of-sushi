@@ -25,4 +25,12 @@ export interface GameState {
   isCompleted: boolean;
 }
 
+export interface ClearProof {
+  version: 2;
+  problemId: string;
+  clearedAt: string;
+  gameMode: 'np-hard' | 'undecidable';
+  selectedTiles: number[];
+}
+
 export type Screen = 'title' | 'problem-select' | 'game' | 'clear';

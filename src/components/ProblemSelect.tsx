@@ -1,5 +1,5 @@
 import type { Screen, Problem } from '../types';
-import { isProblemCleared } from '../utils/storage';
+import { getClearData } from '../utils/storage';
 
 interface ProblemSelectProps {
   problems: Problem[];
@@ -10,6 +10,11 @@ interface ProblemSelectProps {
 
 export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem }: ProblemSelectProps) => {
   const filteredProblems = problems.filter(p => p.difficulty === gameMode);
+  const clearedProblemIds = new Set(
+    getClearData()
+      .filter(clearData => clearData.gameMode === gameMode)
+      .map(clearData => clearData.problemId)
+  );
   
   const modeTitle = "問題選択"//gameMode === 'np-hard' ? 'NP-ハードモード' : '決定不能モード';
   const modeColor = gameMode === 'np-hard' ? 'green' : 'red';
@@ -32,7 +37,7 @@ export const ProblemSelect = ({ problems, gameMode, onNavigate, onSelectProblem 
 
         <div className="grid grid-cols-4 gap-6">
           {filteredProblems.map((problem, index) => {
-            const isCleared = isProblemCleared(problem.id, gameMode);
+            const isCleared = clearedProblemIds.has(problem.id);
             return (
               <button
                 key={problem.id}

@@ -1,67 +1,98 @@
-// ローカルストレージを使ったクリア状態の管理
+import { sampleProblems } from '../data/problems';
+import type { ClearProof } from '../types';
+import { isClearProof, validateClearProof } from './solutionValidator';
 
-export interface ClearData {
-  problemId: number;
-  clearedAt: string; // クリア日時 ISO string
-  gameMode: 'np-hard' | 'undecidable';
-}
+const CLEAR_DATA_KEY = 'sushi-post-problem-clear-data-v2';
 
-const CLEAR_DATA_KEY = 'sushi-post-problem-clear-data';
-
-// クリア状態をローカルストレージから取得
-export const getClearData = (): ClearData[] => {
+const saveClearData = (clearData: ClearProof[]): boolean => {
   try {
-    const data = localStorage.getItem(CLEAR_DATA_KEY);
-    return data ? JSON.parse(data) : [];
+    localStorage.setItem(CLEAR_DATA_KEY, JSON.stringify(clearData));
+    return true;
+  } catch (error) {
+    console.error('Failed to save clear data:', error);
+    return false;
+  }
+};
+
+export const getClearData = (): ClearProof[] => {
+  try {
+    const storedData = localStorage.getItem(CLEAR_DATA_KEY);
+    if (storedData === null) return [];
+
+    const parsedData: unknown = JSON.parse(storedData);
+    if (!Array.isArray(parsedData)) {
+      saveClearData([]);
+      return [];
+    }
+
+    const verifiedData: ClearProof[] = [];
+    const verifiedProblems = new Set<string>();
+    let needsRewrite = false;
+
+    for (const value of parsedData) {
+      if (!isClearProof(value) || !validateClearProof(value, sampleProblems)) {
+        needsRewrite = true;
+        continue;
+      }
+
+      const problemKey = `${value.gameMode}:${value.problemId}`;
+      if (verifiedProblems.has(problemKey)) {
+        needsRewrite = true;
+        continue;
+      }
+
+      verifiedProblems.add(problemKey);
+      verifiedData.push(value);
+    }
+
+    if (needsRewrite) {
+      saveClearData(verifiedData);
+    }
+
+    return verifiedData;
   } catch (error) {
     console.error('Failed to load clear data:', error);
+    saveClearData([]);
     return [];
   }
 };
 
-// クリア状態をローカルストレージに保存
-export const saveClearData = (clearData: ClearData[]): void => {
-  try {
-    localStorage.setItem(CLEAR_DATA_KEY, JSON.stringify(clearData));
-  } catch (error) {
-    console.error('Failed to save clear data:', error);
-  }
-};
-
-// 特定の問題がクリア済みかどうかを確認
 export const isProblemCleared = (problemId: string, gameMode: 'np-hard' | 'undecidable'): boolean => {
-  const clearData = getClearData();
-  const numericId = parseInt(problemId, 10);
-  return clearData.some(data => data.problemId === numericId && data.gameMode === gameMode);
+  return getClearData().some(data => (
+    data.problemId === problemId && data.gameMode === gameMode
+  ));
 };
 
-// 問題をクリア済みとしてマーク
-export const markProblemCleared = (problemId: string, gameMode: 'np-hard' | 'undecidable'): void => {
+export const markProblemCleared = (
+  problemId: string,
+  gameMode: 'np-hard' | 'undecidable',
+  selectedTiles: number[]
+): boolean => {
   const clearData = getClearData();
-  const numericId = parseInt(problemId, 10);
-  
-  // 既にクリア済みの場合は更新しない
-  if (isProblemCleared(problemId, gameMode)) {
-    return;
+
+  if (clearData.some(data => data.problemId === problemId && data.gameMode === gameMode)) {
+    return true;
   }
-  
-  const newClearData: ClearData = {
-    problemId: numericId,
+
+  const newClearProof: ClearProof = {
+    version: 2,
+    problemId,
     clearedAt: new Date().toISOString(),
-    gameMode
+    gameMode,
+    selectedTiles: [...selectedTiles]
   };
-  
-  clearData.push(newClearData);
-  saveClearData(clearData);
+
+  if (!validateClearProof(newClearProof, sampleProblems)) {
+    return false;
+  }
+
+  return saveClearData([...clearData, newClearProof]);
 };
 
-// 特定のゲームモードでのクリア済み問題数を取得
 export const getClearedProblemCount = (gameMode: 'np-hard' | 'undecidable'): number => {
-  const clearData = getClearData();
-  return clearData.filter(data => data.gameMode === gameMode).length;
+  return getClearData().filter(data => data.gameMode === gameMode).length;
 };
 
-// 全体のクリア率を取得
 export const getClearProgress = (totalProblems: number, gameMode: 'np-hard' | 'undecidable'): number => {
   const clearedCount = getClearedProblemCount(gameMode);
   return totalProblems > 0 ? Math.round((clearedCount / totalProblems) * 100) : 0;
