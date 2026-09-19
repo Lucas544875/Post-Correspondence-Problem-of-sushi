@@ -1,4 +1,5 @@
 import type { Problem } from '../types';
+import { discoveredProblems } from './discoveredProblems';
 
 // 画像識別用の文字を使用
 
@@ -191,4 +192,5 @@ export const sampleProblems: Problem[] = [
       { id: 'tile-2', top: 'T', bottom: 'S' },      // 上:タンポポ、下:刺身
     ]
   },
+  ...discoveredProblems,
 ];
