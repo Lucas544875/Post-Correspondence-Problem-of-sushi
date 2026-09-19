@@ -274,3 +274,21 @@ body {
 .merged-element-fade {
   animation: merged-item-fade 0.4s ease-in-out forwards;
 }
+
+/* Keep both tile rows centered and use the same icon scale for either row. */
+.tile-symbols {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-width: 0;
+  min-height: 2rem;
+}
+
+.tile-symbols > img {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  min-width: 0;
+  margin: 0;
+}

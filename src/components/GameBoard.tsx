@@ -331,13 +331,28 @@ export const GameBoard = ({ problem, onNavigate, onClear }: GameBoardProps) => {
                 {String(index + 1).padStart(2, '0')}
               </div>
               
-              <div className="text-center mt-3">
-                <div className="flex items-center justify-center border-b-2 border-gray-400 border-dashed pb-2 rounded-t">
-                  <div className="ml-2 flex min-h-8">{renderGameString(tile.top)}</div>
-                </div>
-                <div className="flex items-center justify-center pt-2  rounded-b px-2">
-                  <div className="ml-2 flex min-h-8">{renderGameString(tile.bottom)}</div>
-                </div>
+              <div className="mt-3">
+                {[tile.top, tile.bottom].map((row, rowIndex) => (
+                  <div
+                    key={rowIndex}
+                    className={`flex min-h-10 items-center justify-center ${
+                      rowIndex === 0
+                        ? 'border-b-2 border-gray-400 border-dashed pb-2'
+                        : 'pt-2'
+                    }`}
+                  >
+                    <div
+                      className="tile-symbols"
+                      style={{
+                        gridTemplateColumns: `repeat(${Math.max(row.length, 1)}, minmax(0, 1fr))`,
+                        width: `${100 * row.length / Math.max(tile.top.length, tile.bottom.length, 1)}%`,
+                        maxWidth: `${row.length * 40}px`,
+                      }}
+                    >
+                      {renderGameString(row)}
+                    </div>
+                  </div>
+                ))}
               </div>
             </button>
             );
